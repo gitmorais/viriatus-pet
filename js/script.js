@@ -156,21 +156,19 @@ if (form) {
         const service = document.getElementById('service').value;
         const message = document.getElementById('message').value.trim();
 
-        const waText = [
-            '🐾 *Pedido de Marcação – ViriatuPet\'s*',
-            '',
-            `*Nome:* ${name}`,
-            `*Contacto:* ${phone}`,
-            `*Animal:* ${animal}`,
-            `*Serviço:* ${service}`,
-            message ? `*Mensagem:* ${message}` : null
-        ].filter(Boolean).join('\n');
+        const subject = encodeURIComponent(`Pedido de Marcação – ViriatuPet's`);
+        const body = encodeURIComponent([
+            `Nome: ${name}`,
+            `Contacto: ${phone}`,
+            `Animal: ${animal}`,
+            `Serviço: ${service}`,
+            message ? `Mensagem: ${message}` : null
+        ].filter(Boolean).join('\n'));
 
-        const waUrl = `https://wa.me/351933454251?text=${encodeURIComponent(waText)}`;
+        const mailUrl = `mailto:goncalo.morais@gmail.com?subject=${subject}&body=${body}`;
 
-        /* Short delay for UX feedback, then open WhatsApp */
         setTimeout(() => {
-            window.open(waUrl, '_blank', 'noopener,noreferrer');
+            window.location.href = mailUrl;
             showFormSuccess();
         }, 600);
     });
