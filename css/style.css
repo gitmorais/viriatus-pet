@@ -162,6 +162,15 @@ h1, h2, h3, h4 {
 }
 .btn-whatsapp-lg:hover { background: #20B85A; }
 
+.btn-phone-lg {
+    background: rgba(255,255,255,.15);
+    color: #fff;
+    font-size: 1.1rem;
+    padding: 16px 36px;
+    border: 2px solid rgba(255,255,255,.5);
+}
+.btn-phone-lg:hover { background: rgba(255,255,255,.25); border-color: #fff; }
+
 .btn-sm { padding: 10px 20px; font-size: .9rem; }
 .btn-full { width: 100%; justify-content: center; }
 
