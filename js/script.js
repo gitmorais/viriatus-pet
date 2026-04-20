@@ -135,42 +135,40 @@ document.querySelectorAll('.faq-q').forEach(btn => {
 });
 
 /* ---- Appointment Form ---- */
+/* SETUP: Cria conta gratuita em formspree.io, cria um form, e substitui FORM_ID abaixo */
+const FORMSPREE_ENDPOINT = 'https://formspree.io/f/FORM_ID';
+
 const form = document.getElementById('appointmentForm');
 const formSuccess = document.getElementById('formSuccess');
 const submitBtn = document.getElementById('submitBtn');
 
 if (form) {
-    form.addEventListener('submit', e => {
+    form.addEventListener('submit', async e => {
         e.preventDefault();
         if (!validateForm()) return;
 
-        /* Show loading state */
         submitBtn.querySelector('.btn-default-text').style.display = 'none';
         submitBtn.querySelector('.btn-loading-text').style.display = 'flex';
         submitBtn.disabled = true;
 
-        /* Build WhatsApp message from form data */
-        const name    = document.getElementById('name').value.trim();
-        const phone   = document.getElementById('phone').value.trim();
-        const animal  = document.getElementById('animal').value;
-        const service = document.getElementById('service').value;
-        const message = document.getElementById('message').value.trim();
+        try {
+            const response = await fetch(FORMSPREE_ENDPOINT, {
+                method: 'POST',
+                body: new FormData(form),
+                headers: { 'Accept': 'application/json' }
+            });
 
-        const subject = encodeURIComponent(`Pedido de Marcação – ViriatuPet's`);
-        const body = encodeURIComponent([
-            `Nome: ${name}`,
-            `Contacto: ${phone}`,
-            `Animal: ${animal}`,
-            `Serviço: ${service}`,
-            message ? `Mensagem: ${message}` : null
-        ].filter(Boolean).join('\n'));
-
-        const mailUrl = `mailto:goncalo.morais@gmail.com?subject=${subject}&body=${body}`;
-
-        setTimeout(() => {
-            window.location.href = mailUrl;
-            showFormSuccess();
-        }, 600);
+            if (response.ok) {
+                showFormSuccess();
+            } else {
+                throw new Error('Submission failed');
+            }
+        } catch {
+            submitBtn.querySelector('.btn-default-text').style.display = 'flex';
+            submitBtn.querySelector('.btn-loading-text').style.display = 'none';
+            submitBtn.disabled = false;
+            alert('Ocorreu um erro ao enviar. Por favor contacte-nos diretamente via WhatsApp (933 454 251) ou email (viriatuspet@gmail.com).');
+        }
     });
 }
 

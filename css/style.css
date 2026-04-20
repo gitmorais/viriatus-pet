@@ -598,7 +598,91 @@ h1, h2, h3, h4 {
 }
 .about-features i { color: var(--teal); font-size: 1rem; flex-shrink: 0; }
 
-/* ---- 9. Services ---- */
+/* ---- 9. Team ---- */
+.team { background: #fff; }
+
+.team-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+}
+
+.team-card {
+    background: var(--cream);
+    border-radius: var(--r-lg);
+    padding: 40px 36px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+    border: 1px solid var(--cream-dark);
+    transition: transform var(--transition), box-shadow var(--transition);
+}
+.team-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-md); }
+
+.team-photo {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    border: 4px solid #fff;
+    flex-shrink: 0;
+}
+
+.team-photo-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 2.2rem;
+    font-weight: 900;
+}
+
+.team-photo img { width: 100%; height: 100%; object-fit: cover; }
+
+.team-info h3 { font-size: 1.3rem; color: var(--text); margin-bottom: 6px; }
+
+.team-role {
+    display: inline-block;
+    font-size: .78rem;
+    font-weight: 700;
+    color: var(--orange);
+    background: var(--orange-pale);
+    padding: 3px 14px;
+    border-radius: 50px;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+}
+
+.team-bio {
+    font-size: .93rem;
+    color: var(--text-mid);
+    line-height: 1.72;
+    margin-bottom: 16px;
+}
+
+.team-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+}
+
+.team-tags span {
+    font-size: .78rem;
+    font-weight: 600;
+    color: var(--teal-dark);
+    background: var(--teal-pale);
+    padding: 4px 12px;
+    border-radius: 50px;
+}
+
+/* ---- Services ---- */
 .services {
     background: linear-gradient(160deg, var(--teal-dark) 0%, var(--teal) 100%);
     position: relative;
@@ -1576,6 +1660,7 @@ h1, h2, h3, h4 {
 }
 
 @media (max-width: 768px) {
+    .team-grid { grid-template-columns: 1fr; }
     .section { padding: 60px 0; }
 
     .nav-menu { display: none; position: fixed; inset: 0; top: 70px; background: #fff;
