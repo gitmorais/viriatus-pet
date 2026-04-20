@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Blog da ViriatuPet's – Consultório Veterinário em Viseu. Dicas, conselhos e informação veterinária para donos de cães e gatos.">
+    <meta name="keywords" content="blog veterinário Viseu, dicas animais Viseu, saúde cães gatos Viseu, vacinação desparasitação">
+    <title>Blog Veterinário | ViriatuPet's – Consultório Veterinário em Viseu</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&family=Nunito+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/blog.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar scrolled" id="navbar">
+    <div class="container nav-container">
+        <a href="index.html" class="nav-brand">
+            <div class="nav-logo-img">
+                <img src="Logo.jpg" alt="ViriatuPet's Logo">
+            </div>
+            <div class="nav-brand-text">
+                <span class="nav-name">ViriatuPet's</span>
+                <span class="nav-sub">Consultório Veterinário</span>
+            </div>
+        </a>
+        <ul class="nav-menu" id="navMenu">
+            <li><a href="index.html#sobre" class="nav-link">Sobre</a></li>
+            <li><a href="index.html#servicos" class="nav-link">Serviços</a></li>
+            <li><a href="blog.html" class="nav-link" style="color:var(--teal)">Blog</a></li>
+            <li><a href="index.html#contactos" class="nav-link">Contactos</a></li>
+            <li><a href="index.html#marcacao" class="nav-cta-btn">Marcar Consulta</a></li>
+        </ul>
+        <button class="hamburger" id="hamburger" aria-label="Abrir menu" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
+    </div>
+</nav>
+
+<!-- PAGE HERO -->
+<header class="page-hero">
+    <div class="page-hero-paws" aria-hidden="true"></div>
+    <div class="container">
+        <div class="page-hero-inner" data-aos="fade-up">
+            <nav class="breadcrumb" aria-label="Navegação">
+                <a href="index.html">Início</a>
+                <i class="fas fa-chevron-right"></i>
+                <span>Blog</span>
+            </nav>
+            <h1>Dicas e Conselhos Veterinários</h1>
+            <p>Informação útil e de confiança para donos de cães e gatos em Viseu.
+            Escrita pela equipa da ViriatuPet's com carinho e rigor.</p>
+        </div>
+    </div>
+    <div class="page-hero-wave" aria-hidden="true">
+        <svg viewBox="0 0 1440 70" preserveAspectRatio="none">
+            <path d="M0,35 C300,70 600,0 900,35 C1100,60 1300,10 1440,35 L1440,70 L0,70 Z" fill="#FFF6E8"/>
+        </svg>
+    </div>
+</header>
+
+<!-- BLOG LISTING -->
+<section class="blog-listing">
+    <div class="container">
+
+        <div class="blog-listing-grid">
+
+            <!-- Artigo em destaque -->
+            <a href="blog/vacinacao-caes-viseu.html" class="blog-card blog-card--featured" data-aos="fade-up">
+                <div class="blog-card-thumb" style="background:linear-gradient(135deg,#1A7A78,#2BA8A4);">
+                    <div class="blog-card-thumb-ph">
+                        <i class="fas fa-syringe"></i>
+                        <span>Vacinação</span>
+                    </div>
+                    <span class="blog-cat-badge">Destaque</span>
+                </div>
+                <div class="blog-card-body">
+                    <div class="blog-card-meta">
+                        <span><i class="fas fa-calendar"></i> Abril 2026</span>
+                        <span><i class="fas fa-clock"></i> 6 min de leitura</span>
+                        <span><i class="fas fa-tag"></i> Prevenção</span>
+                    </div>
+                    <h3>Vacinação de Cães em Viseu: Guia Completo para Donos Responsáveis</h3>
+                    <p>Saiba quais as vacinas obrigatórias por lei, o calendário de vacinação recomendado para cachorros e adultos, os possíveis efeitos secundários e como manter o seu cão devidamente protegido em Viseu.</p>
+                    <span class="blog-read-more">Ler artigo completo <i class="fas fa-arrow-right"></i></span>
+                </div>
+            </a>
+
+            <!-- Artigo 2 -->
+            <a href="blog/desparasitacao-caes-gatos.html" class="blog-card" data-aos="fade-up" data-aos-delay="50">
+                <div class="blog-card-thumb" style="background:linear-gradient(135deg,#E8692F,#C5511F);">
+                    <div class="blog-card-thumb-ph">
+                        <i class="fas fa-shield-virus"></i>
+                        <span>Desparasitação</span>
+                    </div>
+                    <span class="blog-cat-badge" style="background:var(--teal)">Prevenção</span>
+                </div>
+                <div class="blog-card-body">
+                    <div class="blog-card-meta">
+                        <span><i class="fas fa-calendar"></i> Abril 2026</span>
+                        <span><i class="fas fa-clock"></i> 5 min</span>
+                    </div>
+                    <h3>Desparasitação em Cães e Gatos: Quando, Como e Porquê</h3>
+                    <p>Tudo o que precisa de saber sobre parasitas internos e externos, frequência de tratamento e como proteger o seu animal — e a sua família.</p>
+                    <span class="blog-read-more">Ler artigo <i class="fas fa-arrow-right"></i></span>
+                </div>
+            </a>
+
+            <!-- Artigo 3 -->
+            <a href="blog/quando-ir-veterinario.html" class="blog-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="blog-card-thumb" style="background:linear-gradient(135deg,#115E5C,#1A7A78);">
+                    <div class="blog-card-thumb-ph">
+                        <i class="fas fa-heart-pulse"></i>
+                        <span>Urgências</span>
+                    </div>
+                    <span class="blog-cat-badge" style="background:#E84B3A">Urgências</span>
+                </div>
+                <div class="blog-card-body">
+                    <div class="blog-card-meta">
+                        <span><i class="fas fa-calendar"></i> Abril 2026</span>
+                        <span><i class="fas fa-clock"></i> 5 min</span>
+                    </div>
+                    <h3>Sinais de Alarme: Quando Levar o Seu Cão ou Gato ao Veterinário com Urgência</h3>
+                    <p>Aprenda a distinguir sintomas que requerem atenção imediata dos que podem aguardar consulta. Um guia prático que pode salvar a vida do seu animal.</p>
+                    <span class="blog-read-more">Ler artigo <i class="fas fa-arrow-right"></i></span>
+                </div>
+            </a>
+
+            <!-- Artigos em breve -->
+            <div class="blog-card blog-card--soon" data-aos="fade-up" data-aos-delay="50">
+                <div class="blog-card-thumb" style="background:linear-gradient(135deg,#2BA8A4,#3ABDB9);">
+                    <div class="blog-card-thumb-ph">
+                        <i class="fas fa-bowl-food"></i>
+                        <span>Nutrição</span>
+                    </div>
+                    <span class="blog-cat-badge">Em breve</span>
+                </div>
+                <div class="blog-card-body">
+                    <div class="blog-card-meta">
+                        <span><i class="fas fa-calendar"></i> Em breve</span>
+                        <span><i class="fas fa-tag"></i> Nutrição</span>
+                    </div>
+                    <h3>Alimentação Saudável para Cães e Gatos: O Guia da ViriatuPet's</h3>
+                    <p>O que deve (e não deve) dar ao seu animal. Ração, comida húmida, alimentos proibidos e como escolher a melhor dieta.</p>
+                    <span class="blog-read-more" style="opacity:.5">Em breve</span>
+                </div>
+            </div>
+
+            <div class="blog-card blog-card--soon" data-aos="fade-up" data-aos-delay="100">
+                <div class="blog-card-thumb" style="background:linear-gradient(135deg,#E8692F,#F5854E);">
+                    <div class="blog-card-thumb-ph">
+                        <i class="fas fa-microchip"></i>
+                        <span>Termochip</span>
+                    </div>
+                    <span class="blog-cat-badge">Em breve</span>
+                </div>
+                <div class="blog-card-body">
+                    <div class="blog-card-meta">
+                        <span><i class="fas fa-calendar"></i> Em breve</span>
+                        <span><i class="fas fa-tag"></i> Identificação</span>
+                    </div>
+                    <h3>Termochip em Cães: O Que É, Obrigatoriedade e Como Funciona</h3>
+                    <p>A identificação eletrónica é obrigatória por lei em Portugal. Saiba tudo sobre o termochip, o processo e a sua importância.</p>
+                    <span class="blog-read-more" style="opacity:.5">Em breve</span>
+                </div>
+            </div>
+
+            <div class="blog-card blog-card--soon" data-aos="fade-up" data-aos-delay="150">
+                <div class="blog-card-thumb" style="background:linear-gradient(135deg,#1A7A78,#E8692F);">
+                    <div class="blog-card-thumb-ph">
+                        <i class="fas fa-house-medical"></i>
+                        <span>Domicílios</span>
+                    </div>
+                    <span class="blog-cat-badge">Em breve</span>
+                </div>
+                <div class="blog-card-body">
+                    <div class="blog-card-meta">
+                        <span><i class="fas fa-calendar"></i> Em breve</span>
+                        <span><i class="fas fa-tag"></i> Serviços</span>
+                    </div>
+                    <h3>Consulta Veterinária ao Domicílio em Viseu: Quando Faz Sentido?</h3>
+                    <p>Para animais com mobilidade reduzida ou vários pets em casa, o domicílio pode ser a melhor solução. Saiba tudo sobre este serviço.</p>
+                    <span class="blog-read-more" style="opacity:.5">Em breve</span>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="blog-pagination" aria-label="Paginação">
+            <button class="page-num active" aria-current="page">1</button>
+            <button class="page-num" disabled style="opacity:.4">2</button>
+            <button class="page-num" disabled style="opacity:.4">3</button>
+        </div>
+
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="footer-top">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand-col">
+                    <div class="footer-logo">
+                        <img src="Logo.jpg" alt="ViriatuPet's Logo" class="footer-logo-img">
+                    </div>
+                    <p class="footer-desc">Cuidamos dos seus animais como se fossem os nossos. Consultório veterinário em Viseu para cães e gatos.</p>
+                    <div class="footer-socials">
+                        <a href="https://wa.me/351933454251" aria-label="WhatsApp" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://www.facebook.com/profile.php?id=61583484770981" aria-label="Facebook" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook"></i></a>
+                        <a href="mailto:viriatuspet@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links-col">
+                    <h4>Navegação</h4>
+                    <ul>
+                        <li><a href="index.html#sobre">Sobre nós</a></li>
+                        <li><a href="index.html#servicos">Serviços</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="index.html#contactos">Contactos</a></li>
+                    </ul>
+                </div>
+                <div class="footer-services-col">
+                    <h4>Artigos Recentes</h4>
+                    <ul>
+                        <li><a href="blog/vacinacao-caes-viseu.html">Vacinação de cães em Viseu</a></li>
+                        <li><a href="blog/desparasitacao-caes-gatos.html">Desparasitação: quando e como</a></li>
+                        <li><a href="blog/quando-ir-veterinario.html">Sinais de alarme no seu pet</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact-col">
+                    <h4>Contacto</h4>
+                    <div class="footer-contact-item"><i class="fas fa-phone"></i><a href="tel:+351933454251">933 454 251</a></div>
+                    <div class="footer-contact-item"><i class="fas fa-envelope"></i><a href="mailto:viriatuspet@gmail.com">viriatuspet@gmail.com</a></div>
+                    <div class="footer-contact-item"><i class="fas fa-location-dot"></i><span>Viseu, Portugal</span></div>
+                    <a href="index.html#marcacao" class="btn btn-primary btn-sm footer-cta-btn">Marcar Consulta</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <div class="container">
+            <p>© 2026 ViriatuPet's – Consultório Veterinário, Viseu. Todos os direitos reservados.</p>
+            <div class="footer-bottom-links"><a href="#">Privacidade</a><span>·</span><a href="#">Termos</a></div>
+        </div>
+    </div>
+</footer>
+
+<a href="https://wa.me/351933454251?text=Ol%C3%A1!%20Gostaria%20de%20marcar%20uma%20consulta%20na%20ViriatuPet%27s."
+   class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+    <span class="wa-tooltip">Marcar Consulta</span>
+</a>
+
+<script src="js/script.js"></script>
+</body>
+</html>
