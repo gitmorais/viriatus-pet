@@ -403,7 +403,7 @@ h1, h2, h3, h4 {
     font-weight: 600;
     border: 1px solid rgba(255,255,255,.2);
 }
-.trust-pill i { color: var(--orange); }
+.trust-pill i { color: #25D366; }
 
 .hero-visual {
     position: relative;
