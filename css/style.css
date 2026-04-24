@@ -473,12 +473,12 @@ h1, h2, h3, h4 {
     color: var(--text-light);
 }
 @keyframes floatCard {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-10px); }
+    0%, 100% { transform: translate3d(0, 0, 0); }
+    50% { transform: translate3d(0, -10px, 0); }
 }
 
-.hfc-1 { bottom: 30px; left: -20px; animation: floatCard 4s ease-in-out infinite; }
-.hfc-2 { top: 40px; right: -20px; animation: floatCard 5s ease-in-out infinite 1.5s; }
+.hfc-1 { bottom: 30px; left: -20px; animation: floatCard 4s ease-in-out infinite; will-change: transform; }
+.hfc-2 { top: 40px; right: -20px; animation: floatCard 4.5s ease-in-out infinite 1s; will-change: transform; }
 
 .hero-wave {
     position: absolute;
