@@ -440,6 +440,9 @@ figure.article-img figcaption {
 .article-cta-box h3 { color: #fff; margin-bottom: 10px; font-size: 1.25rem; }
 .article-cta-box p { color: rgba(255,255,255,.82); margin-bottom: 24px; font-size: .92rem; line-height: 1.6; }
 .article-cta-box .btn { margin: 0 auto; }
+.article-body .btn { text-decoration: none; }
+.article-body .btn-whatsapp { background: #25D366; color: #fff; }
+.article-body .btn-whatsapp:hover { background: #20B85A; color: #fff; }
 
 /* Article nav (prev/next) */
 .article-nav {
