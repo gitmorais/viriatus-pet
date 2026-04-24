@@ -403,7 +403,7 @@ h1, h2, h3, h4 {
     font-weight: 600;
     border: 1px solid rgba(255,255,255,.2);
 }
-.trust-pill i { color: #7EE8A2; }
+.trust-pill i { color: var(--orange); }
 
 .hero-visual {
     position: relative;
@@ -459,7 +459,7 @@ h1, h2, h3, h4 {
 }
 .hero-float-card i {
     font-size: 1.4rem;
-    color: var(--teal);
+    color: var(--orange);
     flex-shrink: 0;
 }
 .hero-float-card strong {
