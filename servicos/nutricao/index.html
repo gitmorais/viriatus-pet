@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nutrição Veterinária para Cães e Gatos em Viseu | ViriatuPet's</title>
+    <meta name="description" content="Aconselhamento nutricional veterinário para cães, gatos e animais exóticos em Viseu. Dietas personalizadas, controlo de peso e alimentação terapêutica na ViriatuPet's.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://viriatuspets.pt/servicos/nutricao/">
+    <link rel="alternate" hreflang="pt-PT" href="https://viriatuspets.pt/servicos/nutricao/">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="pt_PT">
+    <meta property="og:title" content="Nutrição Veterinária para Cães e Gatos em Viseu | ViriatuPet's">
+    <meta property="og:description" content="O que o seu animal come define a sua saúde. Aconselhamento nutricional personalizado para cada fase da vida — da ViriatuPet's em Viseu.">
+    <meta property="og:url" content="https://viriatuspets.pt/servicos/nutricao/">
+    <meta property="og:site_name" content="ViriatuPet's – Consultório Veterinário">
+
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@graph":[{"@type":"MedicalBusiness","@id":"https://viriatuspets.pt/#business","name":"ViriatuPet's – Consultório Veterinário","url":"https://viriatuspets.pt","telephone":"+351933454251","email":"viriatuspet@gmail.com","address":{"@type":"PostalAddress","streetAddress":"Av. da Europa, Rua Alexandre Barbosa Campos, lote 121, Loja B","addressLocality":"Viseu","postalCode":"3510-900","addressCountry":"PT"},"geo":{"@type":"GeoCoordinates","latitude":40.6675621,"longitude":-7.916406}},{"@type":"Service","name":"Nutrição Veterinária","description":"Aconselhamento nutricional personalizado para cães, gatos e animais exóticos em Viseu. Dietas adaptadas à espécie, idade, raça e estado de saúde do animal.","provider":{"@id":"https://viriatuspets.pt/#business"},"areaServed":{"@type":"City","name":"Viseu"},"serviceType":"Veterinary Nutrition Consultation","url":"https://viriatuspets.pt/servicos/nutricao/"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Início","item":"https://viriatuspets.pt/"},{"@type":"ListItem","position":2,"name":"Serviços","item":"https://viriatuspets.pt/servicos/"},{"@type":"ListItem","position":3,"name":"Nutrição","item":"https://viriatuspets.pt/servicos/nutricao/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Qual a melhor alimentação para o meu cão ou gato?","acceptedAnswer":{"@type":"Answer","text":"Não existe uma resposta única — a melhor alimentação depende da espécie, idade, raça, peso, nível de atividade e estado de saúde do animal. Um veterinário pode avaliar o seu animal e recomendar a dieta mais adequada, seja ração seca, húmida, caseira ou terapêutica."}},{"@type":"Question","name":"O meu animal está com excesso de peso — o que fazer?","acceptedAnswer":{"@type":"Answer","text":"O excesso de peso é um dos problemas mais comuns em animais de companhia e aumenta o risco de diabetes, problemas articulares e doenças cardíacas. Na ViriatuPet's avaliamos o índice corporal do animal e criamos um plano de perda de peso gradual e seguro, com ajustes na dieta e na rotina."}},{"@type":"Question","name":"A alimentação caseira é boa para cães e gatos?","acceptedAnswer":{"@type":"Answer","text":"Pode ser, mas requer planeamento cuidadoso para garantir que todas as necessidades nutricionais são cumpridas. Dietas caseiras mal formuladas podem causar deficiências graves. Se optar por alimentação caseira, consulte um veterinário para garantir que a dieta é equilibrada e completa."}},{"@type":"Question","name":"O que é uma dieta terapêutica?","acceptedAnswer":{"@type":"Answer","text":"Uma dieta terapêutica é uma alimentação especialmente formulada para gerir ou tratar uma doença específica — como doença renal, diabetes, alergias alimentares, problemas urinários ou doenças hepáticas. São prescritas pelo veterinário e fazem parte do plano de tratamento do animal."}},{"@type":"Question","name":"Com que frequência devo alimentar o meu animal?","acceptedAnswer":{"@type":"Answer","text":"Depende da espécie e da idade. Cachorros e gatinhos precisam de 3 a 4 refeições por dia. Adultos geralmente fazem 2 refeições diárias. Animais sénior ou com condições específicas podem ter necessidades diferentes. O veterinário pode ajudá-lo a definir a rotina ideal."}}]}]}
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&family=Nunito+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../style.css">
+
+    <style>
+        /* ---- Fase de vida (glass cards on teal) ---- */
+        .life-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 1.25rem;
+            position: relative;
+            z-index: 1;
+            margin-top: 2.5rem;
+        }
+        .life-card {
+            background: rgba(255,255,255,.1);
+            border: 1px solid rgba(255,255,255,.2);
+            border-radius: var(--r-md);
+            padding: 1.75rem 1.5rem;
+            backdrop-filter: blur(8px);
+            transition: background var(--transition), transform var(--transition);
+        }
+        .life-card:hover {
+            background: rgba(255,255,255,.18);
+            transform: translateY(-4px);
+        }
+        .life-card-icon {
+            width: 48px;
+            height: 48px;
+            background: rgba(255,255,255,.15);
+            border-radius: var(--r-sm);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            color: #fff;
+            margin-bottom: 1rem;
+        }
+        .life-card h3 { font-size: 1rem; font-weight: 800; color: #fff; margin-bottom: .5rem; }
+        .life-card p  { font-size: .9rem; color: rgba(255,255,255,.82); line-height: 1.65; }
+    </style>
+</head>
+<body>
+
+<!-- ========== NAVBAR ========== -->
+<nav class="navbar" id="navbar">
+    <div class="container nav-container">
+        <a href="../../index.html" class="nav-brand">
+            <div class="nav-logo-img">
+                <img src="../../images/Logo.jpg" alt="ViriatuPet's Logo">
+            </div>
+            <div class="nav-brand-text">
+                <span class="nav-name">ViriatuPet's</span>
+                <span class="nav-sub">Consultório Veterinário</span>
+            </div>
+        </a>
+
+        <ul class="nav-menu" id="navMenu">
+            <li><a href="../../index.html#sobre"     class="nav-link">Sobre</a></li>
+            <li><a href="../../index.html#equipa"    class="nav-link">Equipa</a></li>
+            <li><a href="../../index.html#servicos"  class="nav-link">Serviços</a></li>
+            <li><a href="../../blog.html"            class="nav-link">Blog</a></li>
+            <li><a href="../../index.html#contactos" class="nav-link">Contactos</a></li>
+            <li><a href="../../index.html#marcacao"  class="nav-cta-btn">Marcar Consulta</a></li>
+        </ul>
+
+        <button class="hamburger" id="hamburger" aria-label="Abrir menu" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
+    </div>
+</nav>
+
+<!-- ========== BREADCRUMB ========== -->
+<div class="breadcrumb">
+    <nav class="container bc-inner" aria-label="Breadcrumb">
+        <a href="../../index.html">Início</a>
+        <span class="bc-sep"><i class="fas fa-chevron-right"></i></span>
+        <a href="../../index.html#servicos">Serviços</a>
+        <span class="bc-sep"><i class="fas fa-chevron-right"></i></span>
+        <span>Nutrição</span>
+    </nav>
+</div>
+
+<!-- ========== HERO ========== -->
+<header class="svc-hero">
+
+    <div class="svc-hero-paws" aria-hidden="true">
+        <svg class="paw-pattern" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <pattern id="pawPatternHero" patternUnits="userSpaceOnUse" width="330" height="330">
+                    <g fill="rgba(255,255,255,0.06)" transform="rotate(-20, 165, 155)">
+                        <ellipse cx="165" cy="155" rx="55" ry="43"/>
+                        <ellipse cx="94"  cy="100" rx="19" ry="23"/>
+                        <ellipse cx="142" cy="82"  rx="19" ry="23"/>
+                        <ellipse cx="188" cy="82"  rx="19" ry="23"/>
+                        <ellipse cx="236" cy="100" rx="19" ry="23"/>
+                    </g>
+                </pattern>
+            </defs>
+            <rect width="100%" height="100%" fill="url(#pawPatternHero)"/>
+        </svg>
+    </div>
+
+    <div class="svc-hero-inner">
+        <div data-aos="fade-up">
+            <div class="svc-hero-badge"><i class="fas fa-apple-alt"></i> Serviço Veterinário</div>
+            <h1>Nutrição Veterinária para Cães e Gatos em Viseu</h1>
+            <p>O que o seu animal come define a sua saúde, energia e longevidade. Aconselhamento nutricional personalizado para cada fase da vida — da ViriatuPet's.</p>
+            <div class="svc-hero-actions">
+                <a href="https://wa.me/351933454251?text=Ol%C3%A1!%20Gostaria%20de%20marcar%20uma%20consulta%20de%20nutri%C3%A7%C3%A3o%20na%20ViriatuPet%27s."
+                   class="btn btn-whatsapp" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-whatsapp"></i> Marcar Consulta de Nutrição
+                </a>
+                <a href="../../index.html#marcacao" class="btn btn-outline-white">
+                    <i class="far fa-calendar-alt"></i> Formulário Online
+                </a>
+            </div>
+            <div class="svc-hero-chips">
+                <span class="svc-hero-chip"><i class="fas fa-dog"></i> Cães</span>
+                <span class="svc-hero-chip"><i class="fas fa-cat"></i> Gatos</span>
+                <span class="svc-hero-chip"><i class="fas fa-paw"></i> Exóticos</span>
+                <span class="svc-hero-chip"><i class="fas fa-sliders-h"></i> Dieta personalizada</span>
+                <span class="svc-hero-chip"><i class="fas fa-weight"></i> Controlo de peso</span>
+                <span class="svc-hero-chip"><i class="fas fa-prescription-bottle"></i> Dieta terapêutica</span>
+            </div>
+        </div>
+
+        <div class="svc-hero-img" data-aos="fade-left">
+            <img src="../../images/651079358_17864163204603332_3086723580580206994_n.jpg"
+                 alt="Aconselhamento nutricional veterinário na ViriatuPet's em Viseu"
+                 width="600" height="420" loading="eager">
+            <div class="svc-hero-img-badge">
+                <div class="svc-hero-img-badge-icon"><i class="fas fa-apple-alt"></i></div>
+                <div>
+                    <strong>Nutrição personalizada</strong>
+                    <span>Para cada fase da vida</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="hero-wave" aria-hidden="true">
+        <svg viewBox="0 0 1440 100" preserveAspectRatio="none">
+            <path d="M0,50 C200,100 400,0 600,50 C800,100 1050,0 1250,50 C1350,75 1400,60 1440,50 L1440,100 L0,100 Z" fill="#FFF6E8"/>
+        </svg>
+    </div>
+</header>
+
+<!-- ========== TIPOS DE ACONSELHAMENTO ========== -->
+<section class="sec paw-section" style="background:var(--cream)">
+
+    <div class="paw-section-bg" aria-hidden="true">
+        <svg xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <pattern id="pawPatternCream1" patternUnits="userSpaceOnUse" width="240" height="180">
+                    <g fill="rgba(43,168,164,0.055)">
+                        <g transform="rotate(-15, 55, 52)">
+                            <ellipse cx="55" cy="52" rx="14" ry="11"/>
+                            <ellipse cx="37" cy="38" rx="5" ry="6"/>
+                            <ellipse cx="49" cy="33" rx="5" ry="6"/>
+                            <ellipse cx="61" cy="33" rx="5" ry="6"/>
+                            <ellipse cx="73" cy="38" rx="5" ry="6"/>
+                        </g>
+                        <g transform="rotate(22, 180, 42)">
+                            <ellipse cx="180" cy="42" rx="14" ry="11"/>
+                            <ellipse cx="162" cy="28" rx="5" ry="6"/>
+                            <ellipse cx="174" cy="23" rx="5" ry="6"/>
+                            <ellipse cx="186" cy="23" rx="5" ry="6"/>
+                            <ellipse cx="198" cy="28" rx="5" ry="6"/>
+                        </g>
+                        <g transform="rotate(-28, 115, 138)">
+                            <ellipse cx="115" cy="138" rx="14" ry="11"/>
+                            <ellipse cx="97"  cy="124" rx="5" ry="6"/>
+                            <ellipse cx="109" cy="119" rx="5" ry="6"/>
+                            <ellipse cx="121" cy="119" rx="5" ry="6"/>
+                            <ellipse cx="133" cy="124" rx="5" ry="6"/>
+                        </g>
+                    </g>
+                </pattern>
+            </defs>
+            <rect width="100%" height="100%" fill="url(#pawPatternCream1)"/>
+        </svg>
+    </div>
+
+    <div class="container" data-aos="fade-up">
+        <div class="section-header">
+            <div class="section-label">O que oferecemos</div>
+            <h2 class="section-title">Nutrição adaptada a <span style="color:var(--teal)">cada animal</span></h2>
+            <p class="section-subtitle">Não há uma dieta certa para todos. O aconselhamento nutricional da ViriatuPet's é sempre personalizado — espécie, idade, raça, peso e estado de saúde.</p>
+        </div>
+
+        <div class="inc-grid">
+            <div class="inc-card" data-aos="fade-up" data-aos-delay="50">
+                <div class="inc-icon"><i class="fas fa-weight"></i></div>
+                <h3>Controlo de Peso</h3>
+                <p>Avaliação do índice corporal e plano de perda ou ganho de peso gradual e seguro. O excesso de peso encurta a vida do animal.</p>
+            </div>
+            <div class="inc-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="inc-icon"><i class="fas fa-apple-alt"></i></div>
+                <h3>Dieta de Rotina</h3>
+                <p>Ajudamos a escolher a melhor alimentação para um animal saudável — ração seca, húmida ou mista, com as quantidades certas para cada fase.</p>
+            </div>
+            <div class="inc-card" data-aos="fade-up" data-aos-delay="150">
+                <div class="inc-icon"><i class="fas fa-baby"></i></div>
+                <h3>Nutrição Pediátrica</h3>
+                <p>Cachorros e gatinhos têm necessidades muito específicas. Uma dieta adequada nos primeiros meses é essencial para um crescimento saudável.</p>
+            </div>
+            <div class="inc-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="inc-icon"><i class="fas fa-heart"></i></div>
+                <h3>Nutrição Sénior</h3>
+                <p>Animais mais velhos precisam de menos calorias mas mais suporte articular e renal. Ajustamos a dieta para prolongar a qualidade de vida.</p>
+            </div>
+            <div class="inc-card" data-aos="fade-up" data-aos-delay="250">
+                <div class="inc-icon"><i class="fas fa-prescription-bottle-alt"></i></div>
+                <h3>Dieta Terapêutica</h3>
+                <p>Alimentação especialmente formulada para gerir doenças como insuficiência renal, diabetes, alergias alimentares ou problemas urinários.</p>
+            </div>
+            <div class="inc-card" data-aos="fade-up" data-aos-delay="300">
+                <div class="inc-icon"><i class="fas fa-leaf"></i></div>
+                <h3>Alimentação Caseira</h3>
+                <p>Se prefere cozinhar para o seu animal, garantimos que a dieta é nutricionalmente completa e equilibrada — sem deficiências nem excessos.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Onda: cream → branco -->
+<div class="svc-wave" style="background:var(--cream)" aria-hidden="true">
+    <svg viewBox="0 0 1440 80" preserveAspectRatio="none">
+        <path d="M0,40 C200,0 400,80 600,40 C800,0 1050,80 1250,40 C1350,20 1400,30 1440,40 L1440,80 L0,80 Z" fill="#ffffff"/>
+    </svg>
+</div>
+
+<!-- ========== A ALIMENTAÇÃO IMPORTA ========== -->
+<section class="sec" style="background:#fff">
+    <div class="container">
+        <div class="split">
+            <div class="split-img" data-aos="fade-right">
+                <img src="../../images/651079358_17864163204603332_3086723580580206994_n.jpg"
+                     alt="Aconselhamento nutricional veterinário na ViriatuPet's em Viseu" width="580" height="460" loading="lazy">
+                <div class="split-img-tag">🐾 ViriatuPet's, Viseu</div>
+            </div>
+            <div data-aos="fade-left">
+                <div class="section-label">Porquê importa</div>
+                <h2 class="section-title">A alimentação é <span style="color:var(--teal)">o primeiro medicamento</span></h2>
+                <p style="color:var(--text-mid);margin-bottom:.5rem;font-size:.97rem;line-height:1.7">Mais de 50% dos cães e gatos em Portugal têm excesso de peso. Uma alimentação inadequada está na origem de muitas das doenças mais comuns — diabetes, doença renal, problemas articulares e alergias.</p>
+                <ul class="check-list">
+                    <li>Excesso de peso aumenta o risco de diabetes e doenças cardíacas</li>
+                    <li>Deficiências nutricionais causam problemas ósseos e imunitários</li>
+                    <li>A ração errada pode agravar doenças renais e urinárias</li>
+                    <li>Alergias alimentares afetam a pele, o pelo e o sistema digestivo</li>
+                    <li>Uma boa dieta pode reduzir custos com tratamentos a longo prazo</li>
+                    <li>Animais bem alimentados vivem mais e com mais qualidade de vida</li>
+                </ul>
+                <a href="https://wa.me/351933454251?text=Ol%C3%A1!%20Gostaria%20de%20marcar%20uma%20consulta%20de%20nutri%C3%A7%C3%A3o%20na%20ViriatuPet%27s."
+                   class="btn btn-whatsapp" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-whatsapp"></i> Marcar Consulta de Nutrição
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========== POR FASE DE VIDA (TEAL) ========== -->
+<section class="teal-section paw-section" style="padding:0">
+
+    <div class="svc-wave" aria-hidden="true">
+        <svg viewBox="0 0 1440 80" preserveAspectRatio="none">
+            <path d="M0,40 C200,80 400,0 600,40 C800,80 1050,0 1250,40 C1350,60 1400,50 1440,40 L1440,0 L0,0 Z" fill="#ffffff"/>
+        </svg>
+    </div>
+
+    <div class="paw-section-bg" aria-hidden="true">
+        <svg xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <pattern id="pawPatternTeal" patternUnits="userSpaceOnUse" width="240" height="180">
+                    <g fill="rgba(255,255,255,0.05)">
+                        <g transform="rotate(-18, 60, 48)">
+                            <ellipse cx="60" cy="48" rx="14" ry="11"/>
+                            <ellipse cx="42" cy="34" rx="5" ry="6"/>
+                            <ellipse cx="54" cy="29" rx="5" ry="6"/>
+                            <ellipse cx="66" cy="29" rx="5" ry="6"/>
+                            <ellipse cx="78" cy="34" rx="5" ry="6"/>
+                        </g>
+                        <g transform="rotate(15, 185, 55)">
+                            <ellipse cx="185" cy="55" rx="14" ry="11"/>
+                            <ellipse cx="167" cy="41" rx="5" ry="6"/>
+                            <ellipse cx="179" cy="36" rx="5" ry="6"/>
+                            <ellipse cx="191" cy="36" rx="5" ry="6"/>
+                            <ellipse cx="203" cy="41" rx="5" ry="6"/>
+                        </g>
+                        <g transform="rotate(-32, 110, 140)">
+                            <ellipse cx="110" cy="140" rx="14" ry="11"/>
+                            <ellipse cx="92"  cy="126" rx="5" ry="6"/>
+                            <ellipse cx="104" cy="121" rx="5" ry="6"/>
+                            <ellipse cx="116" cy="121" rx="5" ry="6"/>
+                            <ellipse cx="128" cy="126" rx="5" ry="6"/>
+                        </g>
+                    </g>
+                </pattern>
+            </defs>
+            <rect width="100%" height="100%" fill="url(#pawPatternTeal)"/>
+        </svg>
+    </div>
+
+    <div class="container" style="padding-top:3rem;padding-bottom:1rem;position:relative;z-index:1">
+        <div class="section-header" data-aos="fade-up">
+            <div class="section-label light">Por fase de vida</div>
+            <h2 class="section-title light">A dieta certa em cada etapa</h2>
+            <p class="section-subtitle light">As necessidades nutricionais mudam ao longo da vida. Acompanhamos o seu animal em cada fase.</p>
+        </div>
+
+        <div class="life-grid">
+            <div class="life-card" data-aos="fade-up" data-aos-delay="50">
+                <div class="life-card-icon"><i class="fas fa-baby"></i></div>
+                <h3>Cachorro / Gatinho</h3>
+                <p>Crescimento rápido, necessidades energéticas elevadas. Dieta rica em proteína e cálcio, com porções frequentes. Base para uma vida saudável.</p>
+            </div>
+            <div class="life-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="life-card-icon"><i class="fas fa-running"></i></div>
+                <h3>Adulto Ativo</h3>
+                <p>Manutenção do peso ideal, energia equilibrada para o nível de atividade. A fase mais longa — e onde os erros alimentares se acumulam silenciosamente.</p>
+            </div>
+            <div class="life-card" data-aos="fade-up" data-aos-delay="150">
+                <div class="life-card-icon"><i class="fas fa-heart"></i></div>
+                <h3>Fêmea Gestante / Lactante</h3>
+                <p>Necessidades nutricionais muito aumentadas. Suplementação adequada e dieta de alta densidade energética para suportar a gestação e a amamentação.</p>
+            </div>
+            <div class="life-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="life-card-icon"><i class="fas fa-leaf"></i></div>
+                <h3>Animal Sénior</h3>
+                <p>Menos calorias, mais suporte articular, renal e cognitivo. Dieta adaptada para prolongar a qualidade de vida nos anos dourados.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="svc-wave" aria-hidden="true" style="position:relative;z-index:1">
+        <svg viewBox="0 0 1440 80" preserveAspectRatio="none">
+            <path d="M0,40 C200,0 400,80 600,40 C800,0 1050,80 1250,40 C1350,20 1400,30 1440,40 L1440,80 L0,80 Z" fill="#FFF6E8"/>
+        </svg>
+    </div>
+</section>
+
+<!-- Onda: cream → escuro -->
+<div class="svc-wave" style="background:var(--cream)" aria-hidden="true">
+    <svg viewBox="0 0 1440 80" preserveAspectRatio="none">
+        <path d="M0,40 C200,0 400,80 600,40 C800,0 1050,80 1250,40 C1350,20 1400,30 1440,40 L1440,80 L0,80 Z" fill="#1A3535"/>
+    </svg>
+</div>
+
+<!-- ========== CTA ESCURA ========== -->
+<section class="cta-band">
+    <div class="container cta-band-inner">
+        <div class="cta-band-text" data-aos="fade-up">
+            <h2>Não sabe se está a alimentar bem o seu animal?</h2>
+            <p>Uma consulta de nutrição responde a todas as dúvidas e define um plano concreto para o seu companheiro.</p>
+        </div>
+        <div class="cta-band-btns" data-aos="fade-up" data-aos-delay="100">
+            <a href="https://wa.me/351933454251?text=Ol%C3%A1!%20Gostaria%20de%20marcar%20uma%20consulta%20de%20nutri%C3%A7%C3%A3o%20na%20ViriatuPet%27s."
+               class="btn btn-whatsapp" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-whatsapp"></i> Marcar via WhatsApp
+            </a>
+            <a href="tel:+351933454251" class="btn btn-phone-lg">
+                <i class="fas fa-phone"></i> 933 454 251
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Onda: escuro → branco -->
+<div class="svc-wave" style="background:#1A3535" aria-hidden="true">
+    <svg viewBox="0 0 1440 80" preserveAspectRatio="none">
+        <path d="M0,40 C200,0 400,80 600,40 C800,0 1050,80 1250,40 C1350,20 1400,30 1440,40 L1440,80 L0,80 Z" fill="#ffffff"/>
+    </svg>
+</div>
+
+<!-- ========== FAQ ========== -->
+<section class="sec" style="background:#fff; padding-bottom:2rem">
+    <div class="container">
+        <div class="section-header" data-aos="fade-up">
+            <div class="section-label">FAQ</div>
+            <h2 class="section-title">Perguntas frequentes</h2>
+        </div>
+
+        <div class="faq-list" data-aos="fade-up">
+            <div class="faq-item">
+                <button class="faq-q" aria-expanded="false">
+                    <span>Qual a melhor alimentação para o meu cão ou gato?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="faq-a">
+                    <p>Não existe uma resposta única — a melhor alimentação depende da espécie, idade, raça, peso, nível de atividade e estado de saúde do animal. Um veterinário pode avaliar o seu animal e recomendar a dieta mais adequada, seja ração seca, húmida, caseira ou terapêutica.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-q" aria-expanded="false">
+                    <span>O meu animal está com excesso de peso — o que fazer?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="faq-a">
+                    <p>O excesso de peso é um dos problemas mais comuns em animais de companhia e aumenta o risco de diabetes, problemas articulares e doenças cardíacas. Na ViriatuPet's avaliamos o índice corporal do animal e criamos um plano de perda de peso gradual e seguro, com ajustes na dieta e na rotina.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-q" aria-expanded="false">
+                    <span>A alimentação caseira é boa para cães e gatos?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="faq-a">
+                    <p>Pode ser, mas requer planeamento cuidadoso para garantir que todas as necessidades nutricionais são cumpridas. Dietas caseiras mal formuladas podem causar deficiências graves. Se optar por alimentação caseira, consulte um veterinário para garantir que a dieta é equilibrada e completa.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-q" aria-expanded="false">
+                    <span>O que é uma dieta terapêutica?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="faq-a">
+                    <p>Uma dieta terapêutica é uma alimentação especialmente formulada para gerir ou tratar uma doença específica — como doença renal, diabetes, alergias alimentares, problemas urinários ou doenças hepáticas. São prescritas pelo veterinário e fazem parte do plano de tratamento do animal.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-q" aria-expanded="false">
+                    <span>Com que frequência devo alimentar o meu animal?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="faq-a">
+                    <p>Depende da espécie e da idade. Cachorros e gatinhos precisam de 3 a 4 refeições por dia. Adultos geralmente fazem 2 refeições diárias. Animais sénior ou com condições específicas podem ter necessidades diferentes. O veterinário pode ajudá-lo a definir a rotina ideal.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Onda: branco → cream -->
+<div class="svc-wave" style="background:#fff" aria-hidden="true">
+    <svg viewBox="0 0 1440 80" preserveAspectRatio="none">
+        <path d="M0,40 C200,0 400,80 600,40 C800,0 1050,80 1250,40 C1350,20 1400,30 1440,40 L1440,80 L0,80 Z" fill="#FFF6E8"/>
+    </svg>
+</div>
+
+<!-- ========== OUTROS SERVIÇOS ========== -->
+<section class="sec" style="background:var(--cream)">
+    <div class="container">
+        <div style="margin-top:1rem">
+            <div class="section-header" data-aos="fade-up">
+                <div class="section-label teal">Explore mais</div>
+                <h2 class="section-title">Outros serviços</h2>
+            </div>
+            <div class="s-chips">
+                <a href="../consultas/index.html"        class="s-chip" data-aos="fade-up" data-aos-delay="50"><i class="fas fa-stethoscope"></i> Consultas</a>
+                <a href="../vacinacao/index.html"         class="s-chip" data-aos="fade-up" data-aos-delay="100"><i class="fas fa-syringe"></i> Vacinação</a>
+                <a href="../desparasitacao/index.html"    class="s-chip" data-aos="fade-up" data-aos-delay="150"><i class="fas fa-shield-virus"></i> Desparasitação</a>
+                <a href="../microchip/index.html"         class="s-chip" data-aos="fade-up" data-aos-delay="200"><i class="fas fa-microchip"></i> Microchip</a>
+                <a href="../analises-clinicas/index.html" class="s-chip" data-aos="fade-up" data-aos-delay="250"><i class="fas fa-flask"></i> Análises Clínicas</a>
+                <a href="../visitas-domicilio/index.html" class="s-chip" data-aos="fade-up" data-aos-delay="300"><i class="fas fa-house-medical"></i> Visitas Domicílio</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========== FOOTER ========== -->
+<footer class="footer">
+    <div class="footer-top">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand-col">
+                    <div class="footer-logo">
+                        <img src="../../images/Logo.jpg" alt="ViriatuPet's Logo" class="footer-logo-img">
+                    </div>
+                    <p class="footer-desc">
+                        Cuidamos dos seus animais como se fossem os nossos.
+                        Consultas veterinárias com carinho e profissionalismo em Viseu.
+                    </p>
+                    <div class="footer-socials">
+                        <a href="https://wa.me/351933454251" aria-label="WhatsApp"
+                           target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://www.facebook.com/profile.php?id=61583484770981" aria-label="Facebook"
+                           target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook"></i></a>
+                        <a href="mailto:viriatuspet@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-links-col">
+                    <h4>Navegação</h4>
+                    <ul>
+                        <li><a href="../../index.html#sobre">Sobre nós</a></li>
+                        <li><a href="../../index.html#servicos">Serviços</a></li>
+                        <li><a href="../../index.html#galeria">Galeria</a></li>
+                        <li><a href="../../index.html#testemunhos">Testemunhos</a></li>
+                        <li><a href="../../blog.html">Blog</a></li>
+                        <li><a href="../../index.html#faq">FAQ</a></li>
+                        <li><a href="../../index.html#contactos">Contactos</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-services-col">
+                    <h4>Serviços</h4>
+                    <ul>
+                        <li><a href="../consultas/index.html">Consultas</a></li>
+                        <li><a href="../vacinacao/index.html">Vacinação</a></li>
+                        <li><a href="../desparasitacao/index.html">Desparasitação</a></li>
+                        <li><a href="../microchip/index.html">Microchip</a></li>
+                        <li><a href="../analises-clinicas/index.html">Análises Clínicas</a></li>
+                        <li><a href="../visitas-domicilio/index.html">Domicílios</a></li>
+                        <li><a href="./index.html">Nutrição</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-contact-col">
+                    <h4>Contacto</h4>
+                    <div class="footer-contact-item">
+                        <i class="fas fa-location-dot"></i>
+                        <span>Av. da Europa, Rua A. Barbosa Campos, lote 121, Loja B, 3510-900 Viseu</span>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fas fa-phone"></i>
+                        <a href="tel:+351933454251">933 454 251</a>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:viriatuspet@gmail.com">viriatuspet@gmail.com</a>
+                    </div>
+                    <a href="../../index.html#marcacao" class="btn btn-primary btn-sm footer-cta-btn">Marcar Consulta</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <div class="container">
+            <p>© 2026 ViriatuPet's – Consultório Veterinário, Viseu. Todos os direitos reservados.</p>
+            <div class="footer-bottom-links">
+                <a href="../../privacy.html">Política de Privacidade</a>
+                <span>·</span>
+                <a href="#">Termos e Condições</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- ========== WHATSAPP FLUTUANTE ========== -->
+<a href="https://wa.me/351933454251?text=Ol%C3%A1!%20Gostaria%20de%20marcar%20uma%20consulta%20de%20nutri%C3%A7%C3%A3o%20na%20ViriatuPet%27s."
+   class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Marcar consulta de nutrição via WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+    <span class="wa-tooltip">Marcar Nutrição</span>
+</a>
+
+<!-- ========== VOLTAR AO TOPO ========== -->
+<button class="back-to-top" id="backToTop" aria-label="Voltar ao topo">
+    <i class="fas fa-chevron-up"></i>
+</button>
+
+<script src="../../js/script.js"></script>
+</body>
+</html>

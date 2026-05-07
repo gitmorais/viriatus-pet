@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Análises Clínicas Veterinárias em Viseu | ViriatuPet's</title>
+    <meta name="description" content="Análises clínicas veterinárias em Viseu para cães, gatos e animais exóticos. Hemograma, bioquímica, urianálise e mais — resultados rápidos na ViriatuPet's.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://viriatuspets.pt/servicos/analises-clinicas/">
+    <link rel="alternate" hreflang="pt-PT" href="https://viriatuspets.pt/servicos/analises-clinicas/">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="pt_PT">
+    <meta property="og:title" content="Análises Clínicas Veterinárias em Viseu | ViriatuPet's">
+    <meta property="og:description" content="Diagnóstico preciso através de análises clínicas completas para o seu animal. Resultados rápidos e interpretação pela equipa da ViriatuPet's em Viseu.">
+    <meta property="og:url" content="https://viriatuspets.pt/servicos/analises-clinicas/">
+    <meta property="og:site_name" content="ViriatuPet's – Consultório Veterinário">
+
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@graph":[{"@type":"MedicalBusiness","@id":"https://viriatuspets.pt/#business","name":"ViriatuPet's – Consultório Veterinário","url":"https://viriatuspets.pt","telephone":"+351933454251","email":"viriatuspet@gmail.com","address":{"@type":"PostalAddress","streetAddress":"Av. da Europa, Rua Alexandre Barbosa Campos, lote 121, Loja B","addressLocality":"Viseu","postalCode":"3510-900","addressCountry":"PT"},"geo":{"@type":"GeoCoordinates","latitude":40.6675621,"longitude":-7.916406}},{"@type":"Service","name":"Análises Clínicas Veterinárias","description":"Análises clínicas completas para cães, gatos e animais exóticos em Viseu. Hemograma, bioquímica, urianálise, testes de doenças infecciosas e mais.","provider":{"@id":"https://viriatuspets.pt/#business"},"areaServed":{"@type":"City","name":"Viseu"},"serviceType":"Veterinary Clinical Analysis","url":"https://viriatuspets.pt/servicos/analises-clinicas/"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Início","item":"https://viriatuspets.pt/"},{"@type":"ListItem","position":2,"name":"Serviços","item":"https://viriatuspets.pt/servicos/"},{"@type":"ListItem","position":3,"name":"Análises Clínicas","item":"https://viriatuspets.pt/servicos/analises-clinicas/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Quando é que o meu animal precisa de análises clínicas?","acceptedAnswer":{"@type":"Answer","text":"As análises são recomendadas em várias situações: antes de cirurgias ou anestesia, quando o animal apresenta sintomas como letargia, perda de apetite ou vómitos, em consultas anuais de animais sénior, e para monitorizar doenças crónicas como diabetes ou doença renal."}},{"@type":"Question","name":"O animal precisa de estar em jejum para as análises?","acceptedAnswer":{"@type":"Answer","text":"Para análises de sangue completas, incluindo bioquímica, recomenda-se jejum de 8 a 12 horas para resultados mais precisos, especialmente para valores de glicose e triglicéridos. Para hemograma simples, o jejum não é obrigatório. Confirme sempre com o veterinário."}},{"@type":"Question","name":"Quanto tempo demoram os resultados?","acceptedAnswer":{"@type":"Answer","text":"Muitas análises de rotina, como hemograma e bioquímica básica, podem ter resultados no próprio dia ou em 24 a 48 horas. Análises mais especializadas, como culturas bacterianas ou testes hormonais, podem demorar alguns dias."}},{"@type":"Question","name":"O que é um hemograma veterinário?","acceptedAnswer":{"@type":"Answer","text":"O hemograma é uma análise ao sangue que avalia os glóbulos vermelhos, glóbulos brancos e plaquetas. Permite detetar anemia, infeções, inflamações e outros problemas hematológicos. É uma das análises mais completas e informativas em medicina veterinária."}},{"@type":"Question","name":"As análises clínicas são dolorosas para o animal?","acceptedAnswer":{"@type":"Answer","text":"A colheita de sangue é rápida e minimamente invasiva — semelhante a uma picada de agulha. A maioria dos animais tolera bem o procedimento. A equipa da ViriatuPet's tem cuidado especial em tornar a experiência o mais tranquila possível para o seu animal."}}]}]}
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&family=Nunito+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../style.css">
+
+    <style>
+        /* ---- Situação / quando fazer (glass cards on teal) ---- */
+        .sit-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 1.25rem;
+            position: relative;
+            z-index: 1;
+            margin-top: 2.5rem;
+        }
+        .sit-card {
+            background: rgba(255,255,255,.1);
+            border: 1px solid rgba(255,255,255,.2);
+            border-radius: var(--r-md);
+            padding: 1.75rem 1.5rem;
+            backdrop-filter: blur(8px);
+            transition: background var(--transition), transform var(--transition);
+        }
+        .sit-card:hover {
+            background: rgba(255,255,255,.18);
+            transform: translateY(-4px);
+        }
+        .sit-card-icon {
+            width: 48px;
+            height: 48px;
+            background: rgba(255,255,255,.15);
+            border-radius: var(--r-sm);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            color: #fff;
+            margin-bottom: 1rem;
+        }
+        .sit-card h3 { font-size: 1rem; font-weight: 800; color: #fff; margin-bottom: .5rem; }
+        .sit-card p  { font-size: .9rem; color: rgba(255,255,255,.82); line-height: 1.65; }
+    </style>
+</head>
+<body>
+
+<!-- ========== NAVBAR ========== -->
+<nav class="navbar" id="navbar">
+    <div class="container nav-container">
+        <a href="../../index.html" class="nav-brand">
+            <div class="nav-logo-img">
+                <img src="../../images/Logo.jpg" alt="ViriatuPet's Logo">
+            </div>
+            <div class="nav-brand-text">
+                <span class="nav-name">ViriatuPet's</span>
+                <span class="nav-sub">Consultório Veterinário</span>
+            </div>
+        </a>
+
+        <ul class="nav-menu" id="navMenu">
+            <li><a href="../../index.html#sobre"     class="nav-link">Sobre</a></li>
+            <li><a href="../../index.html#equipa"    class="nav-link">Equipa</a></li>
+            <li><a href="../../index.html#servicos"  class="nav-link">Serviços</a></li>
+            <li><a href="../../blog.html"            class="nav-link">Blog</a></li>
+            <li><a href="../../index.html#contactos" class="nav-link">Contactos</a></li>
+            <li><a href="../../index.html#marcacao"  class="nav-cta-btn">Marcar Consulta</a></li>
+        </ul>
+
+        <button class="hamburger" id="hamburger" aria-label="Abrir menu" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
+    </div>
+</nav>
+
+<!-- ========== BREADCRUMB ========== -->
+<div class="breadcrumb">
+    <nav class="container bc-inner" aria-label="Breadcrumb">
+        <a href="../../index.html">Início</a>
+        <span class="bc-sep"><i class="fas fa-chevron-right"></i></span>
+        <a href="../../index.html#servicos">Serviços</a>
+        <span class="bc-sep"><i class="fas fa-chevron-right"></i></span>
+        <span>Análises Clínicas</span>
+    </nav>
+</div>
+
+<!-- ========== HERO ========== -->
+<header class="svc-hero">
+
+    <div class="svc-hero-paws" aria-hidden="true">
+        <svg class="paw-pattern" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <pattern id="pawPatternHero" patternUnits="userSpaceOnUse" width="330" height="330">
+                    <g fill="rgba(255,255,255,0.06)" transform="rotate(-20, 165, 155)">
+                        <ellipse cx="165" cy="155" rx="55" ry="43"/>
+                        <ellipse cx="94"  cy="100" rx="19" ry="23"/>
+                        <ellipse cx="142" cy="82"  rx="19" ry="23"/>
+                        <ellipse cx="188" cy="82"  rx="19" ry="23"/>
+                        <ellipse cx="236" cy="100" rx="19" ry="23"/>
+                    </g>
+                </pattern>
+            </defs>
+            <rect width="100%" height="100%" fill="url(#pawPatternHero)"/>
+        </svg>
+    </div>
+
+    <div class="svc-hero-inner">
+        <div data-aos="fade-up">
+            <div class="svc-hero-badge"><i class="fas fa-flask"></i> Serviço Veterinário</div>
+            <h1>Análises Clínicas Veterinárias em Viseu</h1>
+            <p>Diagnóstico preciso começa com os dados certos. Análises completas para o seu animal — interpretadas pela nossa equipa com rigor e cuidado.</p>
+            <div class="svc-hero-actions">
+                <a href="https://wa.me/351933454251?text=Ol%C3%A1!%20Gostaria%20de%20marcar%20an%C3%A1lises%20cl%C3%ADnicas%20na%20ViriatuPet%27s."
+                   class="btn btn-whatsapp" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-whatsapp"></i> Marcar Análises
+                </a>
+                <a href="../../index.html#marcacao" class="btn btn-outline-white">
+                    <i class="far fa-calendar-alt"></i> Formulário Online
+                </a>
+            </div>
+            <div class="svc-hero-chips">
+                <span class="svc-hero-chip"><i class="fas fa-dog"></i> Cães</span>
+                <span class="svc-hero-chip"><i class="fas fa-cat"></i> Gatos</span>
+                <span class="svc-hero-chip"><i class="fas fa-paw"></i> Exóticos</span>
+                <span class="svc-hero-chip"><i class="fas fa-bolt"></i> Resultados rápidos</span>
+                <span class="svc-hero-chip"><i class="fas fa-user-md"></i> Dr.ª Sofia Almeida</span>
+            </div>
+        </div>
+
+        <div class="svc-hero-img" data-aos="fade-left">
+            <img src="../../images/651079358_17864163204603332_3086723580580206994_n.jpg"
+                 alt="Análises clínicas veterinárias na ViriatuPet's – Consultório Veterinário em Viseu"
+                 width="600" height="420" loading="eager">
+            <div class="svc-hero-img-badge">
+                <div class="svc-hero-img-badge-icon"><i class="fas fa-flask"></i></div>
+                <div>
+                    <strong>Diagnóstico preciso</strong>
+                    <span>Resultados rápidos</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="hero-wave" aria-hidden="true">
+        <svg viewBox="0 0 1440 100" preserveAspectRatio="none">
+            <path d="M0,50 C200,100 400,0 600,50 C800,100 1050,0 1250,50 C1350,75 1400,60 1440,50 L1440,100 L0,100 Z" fill="#FFF6E8"/>
+        </svg>
+    </div>
+</header>
+
+<!-- ========== TIPOS DE ANÁLISES ========== -->
+<section class="sec paw-section" style="background:var(--cream)">
+
+    <div class="paw-section-bg" aria-hidden="true">
+        <svg xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <pattern id="pawPatternCream1" patternUnits="userSpaceOnUse" width="240" height="180">
+                    <g fill="rgba(43,168,164,0.055)">
+                        <g transform="rotate(-15, 55, 52)">
+                            <ellipse cx="55" cy="52" rx="14" ry="11"/>
+                            <ellipse cx="37" cy="38" rx="5" ry="6"/>
+                            <ellipse cx="49" cy="33" rx="5" ry="6"/>
+                            <ellipse cx="61" cy="33" rx="5" ry="6"/>
+                            <ellipse cx="73" cy="38" rx="5" ry="6"/>
+                        </g>
+                        <g transform="rotate(22, 180, 42)">
+                            <ellipse cx="180" cy="42" rx="14" ry="11"/>
+                            <ellipse cx="162" cy="28" rx="5" ry="6"/>
+                            <ellipse cx="174" cy="23" rx="5" ry="6"/>
+                            <ellipse cx="186" cy="23" rx="5" ry="6"/>
+                            <ellipse cx="198" cy="28" rx="5" ry="6"/>
+                        </g>
+                        <g transform="rotate(-28, 115, 138)">
+                            <ellipse cx="115" cy="138" rx="14" ry="11"/>
+                            <ellipse cx="97"  cy="124" rx="5" ry="6"/>
+                            <ellipse cx="109" cy="119" rx="5" ry="6"/>
+                            <ellipse cx="121" cy="119" rx="5" ry="6"/>
+                            <ellipse cx="133" cy="124" rx="5" ry="6"/>
+                        </g>
+                    </g>
+                </pattern>
+            </defs>
+            <rect width="100%" height="100%" fill="url(#pawPatternCream1)"/>
+        </svg>
+    </div>
+
+    <div class="container" data-aos="fade-up">
+        <div class="section-header">
+            <div class="section-label">O que oferecemos</div>
+            <h2 class="section-title">Análises completas para <span style="color:var(--teal)">cada situação</span></h2>
+            <p class="section-subtitle">Da rotina anual à urgência — temos os meios para obter as respostas que o seu animal precisa.</p>
+        </div>
+
+        <div class="inc-grid">
+            <div class="inc-card" data-aos="fade-up" data-aos-delay="50">
+                <div class="inc-icon"><i class="fas fa-tint"></i></div>
+                <h3>Hemograma Completo</h3>
+                <p>Avaliação dos glóbulos vermelhos, brancos e plaquetas. Deteta anemia, infeções, inflamações e distúrbios imunitários.</p>
+            </div>
+            <div class="inc-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="inc-icon"><i class="fas fa-flask"></i></div>
+                <h3>Bioquímica Sérica</h3>
+                <p>Avalia a função hepática, renal, pancreática e níveis de glucose e proteínas. Essencial antes de qualquer cirurgia ou anestesia.</p>
+            </div>
+            <div class="inc-card" data-aos="fade-up" data-aos-delay="150">
+                <div class="inc-icon"><i class="fas fa-vial"></i></div>
+                <h3>Urianálise</h3>
+                <p>Avaliação da urina para detetar infeções urinárias, doença renal, diabetes e outros problemas do sistema urinário.</p>
+            </div>
+            <div class="inc-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="inc-icon"><i class="fas fa-virus"></i></div>
+                <h3>Testes de Doenças Infeciosas</h3>
+                <p>Despiste de doenças como leishmaniose, erliquiose, parvovirose, FIV e FeLV (leucemia felina) através de testes rápidos ou laboratoriais.</p>
+            </div>
+            <div class="inc-card" data-aos="fade-up" data-aos-delay="250">
+                <div class="inc-icon"><i class="fas fa-balance-scale"></i></div>
+                <h3>Perfil Hormonal</h3>
+                <p>Avaliação da tiroide, suprarrenais e outros marcadores hormonais. Importante para diagnóstico de hipotiroidismo, hiperadrenocorticismo e diabetes.</p>
+            </div>
+            <div class="inc-card" data-aos="fade-up" data-aos-delay="300">
+                <div class="inc-icon"><i class="fas fa-microscope"></i></div>
+                <h3>Coprologia e Parasitologia</h3>
+                <p>Análise de fezes para identificar parasitas intestinais, ovos e quistos — complementa a desparasitação e confirma a sua eficácia.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Onda: cream → branco -->
+<div class="svc-wave" style="background:var(--cream)" aria-hidden="true">
+    <svg viewBox="0 0 1440 80" preserveAspectRatio="none">
+        <path d="M0,40 C200,0 400,80 600,40 C800,0 1050,80 1250,40 C1350,20 1400,30 1440,40 L1440,80 L0,80 Z" fill="#ffffff"/>
+    </svg>
+</div>
+
+<!-- ========== A NOSSA ESPECIALISTA ========== -->
+<section class="sec" style="background:#fff">
+    <div class="container">
+        <div class="split">
+            <div class="split-img" data-aos="fade-right">
+                <img src="../../images/651079358_17864163204603332_3086723580580206994_n.jpg"
+                     alt="Dr.ª Sofia Almeida — análises clínicas na ViriatuPet's em Viseu" width="580" height="460" loading="lazy">
+                <div class="split-img-tag">🐾 ViriatuPet's, Viseu</div>
+            </div>
+            <div data-aos="fade-left">
+                <div class="section-label">A nossa abordagem</div>
+                <h2 class="section-title">Diagnóstico laboratorial <span style="color:var(--teal)">com rigor e clareza</span></h2>
+                <p style="color:var(--text-mid);margin-bottom:.5rem;font-size:.97rem;line-height:1.7">Na ViriatuPet's, cada análise é interpretada com rigor clínico e explicada de forma clara. Não saímos da consulta enquanto o proprietário não compreender o que significam os resultados.</p>
+                <ul class="check-list">
+                    <li>Interpretação personalizada de cada resultado</li>
+                    <li>Explicação clara sem jargão técnico</li>
+                    <li>Correlação com os sintomas clínicos do animal</li>
+                    <li>Acompanhamento até à recuperação completa</li>
+                    <li>Experiência em cães, gatos e animais exóticos</li>
+                    <li>Seguimento de doenças crónicas com análises periódicas</li>
+                </ul>
+                <a href="https://wa.me/351933454251?text=Ol%C3%A1!%20Gostaria%20de%20marcar%20an%C3%A1lises%20cl%C3%ADnicas%20na%20ViriatuPet%27s."
+                   class="btn btn-whatsapp" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-whatsapp"></i> Marcar Análises
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========== QUANDO FAZER ANÁLISES (TEAL) ========== -->
+<section class="teal-section paw-section" style="padding:0">
+
+    <div class="svc-wave" aria-hidden="true">
+        <svg viewBox="0 0 1440 80" preserveAspectRatio="none">
+            <path d="M0,40 C200,80 400,0 600,40 C800,80 1050,0 1250,40 C1350,60 1400,50 1440,40 L1440,0 L0,0 Z" fill="#ffffff"/>
+        </svg>
+    </div>
+
+    <div class="paw-section-bg" aria-hidden="true">
+        <svg xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <pattern id="pawPatternTeal" patternUnits="userSpaceOnUse" width="240" height="180">
+                    <g fill="rgba(255,255,255,0.05)">
+                        <g transform="rotate(-18, 60, 48)">
+                            <ellipse cx="60" cy="48" rx="14" ry="11"/>
+                            <ellipse cx="42" cy="34" rx="5" ry="6"/>
+                            <ellipse cx="54" cy="29" rx="5" ry="6"/>
+                            <ellipse cx="66" cy="29" rx="5" ry="6"/>
+                            <ellipse cx="78" cy="34" rx="5" ry="6"/>
+                        </g>
+                        <g transform="rotate(15, 185, 55)">
+                            <ellipse cx="185" cy="55" rx="14" ry="11"/>
+                            <ellipse cx="167" cy="41" rx="5" ry="6"/>
+                            <ellipse cx="179" cy="36" rx="5" ry="6"/>
+                            <ellipse cx="191" cy="36" rx="5" ry="6"/>
+                            <ellipse cx="203" cy="41" rx="5" ry="6"/>
+                        </g>
+                        <g transform="rotate(-32, 110, 140)">
+                            <ellipse cx="110" cy="140" rx="14" ry="11"/>
+                            <ellipse cx="92"  cy="126" rx="5" ry="6"/>
+                            <ellipse cx="104" cy="121" rx="5" ry="6"/>
+                            <ellipse cx="116" cy="121" rx="5" ry="6"/>
+                            <ellipse cx="128" cy="126" rx="5" ry="6"/>
+                        </g>
+                    </g>
+                </pattern>
+            </defs>
+            <rect width="100%" height="100%" fill="url(#pawPatternTeal)"/>
+        </svg>
+    </div>
+
+    <div class="container" style="padding-top:3rem;padding-bottom:1rem;position:relative;z-index:1">
+        <div class="section-header" data-aos="fade-up">
+            <div class="section-label light">Quando fazer análises</div>
+            <h2 class="section-title light">Há altura certa para cada análise</h2>
+            <p class="section-subtitle light">As análises clínicas são úteis em vários momentos da vida do animal — não só quando está doente.</p>
+        </div>
+
+        <div class="sit-grid">
+            <div class="sit-card" data-aos="fade-up" data-aos-delay="50">
+                <div class="sit-card-icon"><i class="fas fa-cut"></i></div>
+                <h3>Pré-cirúrgico</h3>
+                <p>Antes de qualquer cirurgia ou anestesia, as análises de sangue são obrigatórias para avaliar o risco anestésico e garantir a segurança do animal.</p>
+            </div>
+            <div class="sit-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="sit-card-icon"><i class="fas fa-heartbeat"></i></div>
+                <h3>Animal com sintomas</h3>
+                <p>Letargia, perda de apetite, vómitos, diarreia ou perda de peso inexplicada — as análises ajudam a chegar ao diagnóstico rapidamente.</p>
+            </div>
+            <div class="sit-card" data-aos="fade-up" data-aos-delay="150">
+                <div class="sit-card-icon"><i class="fas fa-star"></i></div>
+                <h3>Check-up Sénior</h3>
+                <p>Animais com mais de 7–8 anos devem fazer análises anuais de rotina para detetar precocemente doenças renais, hepáticas ou endócrinas.</p>
+            </div>
+            <div class="sit-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="sit-card-icon"><i class="fas fa-sync-alt"></i></div>
+                <h3>Monitorização Crónica</h3>
+                <p>Diabetes, doença renal, hipotiroidismo — animais com doenças crónicas precisam de análises periódicas para ajustar o tratamento.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="svc-wave" aria-hidden="true" style="position:relative;z-index:1">
+        <svg viewBox="0 0 1440 80" preserveAspectRatio="none">
+            <path d="M0,40 C200,0 400,80 600,40 C800,0 1050,80 1250,40 C1350,20 1400,30 1440,40 L1440,80 L0,80 Z" fill="#FFF6E8"/>
+        </svg>
+    </div>
+</section>
+
+<!-- Onda: cream → escuro -->
+<div class="svc-wave" style="background:var(--cream)" aria-hidden="true">
+    <svg viewBox="0 0 1440 80" preserveAspectRatio="none">
+        <path d="M0,40 C200,0 400,80 600,40 C800,0 1050,80 1250,40 C1350,20 1400,30 1440,40 L1440,80 L0,80 Z" fill="#1A3535"/>
+    </svg>
+</div>
+
+<!-- ========== CTA ESCURA ========== -->
+<section class="cta-band">
+    <div class="container cta-band-inner">
+        <div class="cta-band-text" data-aos="fade-up">
+            <h2>O seu animal precisa de análises?</h2>
+            <p>Marque agora. Fazemos a colheita na consulta e explicamos cada resultado com clareza.</p>
+        </div>
+        <div class="cta-band-btns" data-aos="fade-up" data-aos-delay="100">
+            <a href="https://wa.me/351933454251?text=Ol%C3%A1!%20Gostaria%20de%20marcar%20an%C3%A1lises%20cl%C3%ADnicas%20na%20ViriatuPet%27s."
+               class="btn btn-whatsapp" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-whatsapp"></i> Marcar via WhatsApp
+            </a>
+            <a href="tel:+351933454251" class="btn btn-phone-lg">
+                <i class="fas fa-phone"></i> 933 454 251
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Onda: escuro → branco -->
+<div class="svc-wave" style="background:#1A3535" aria-hidden="true">
+    <svg viewBox="0 0 1440 80" preserveAspectRatio="none">
+        <path d="M0,40 C200,0 400,80 600,40 C800,0 1050,80 1250,40 C1350,20 1400,30 1440,40 L1440,80 L0,80 Z" fill="#ffffff"/>
+    </svg>
+</div>
+
+<!-- ========== FAQ ========== -->
+<section class="sec" style="background:#fff; padding-bottom:2rem">
+    <div class="container">
+        <div class="section-header" data-aos="fade-up">
+            <div class="section-label">FAQ</div>
+            <h2 class="section-title">Perguntas frequentes</h2>
+        </div>
+
+        <div class="faq-list" data-aos="fade-up">
+            <div class="faq-item">
+                <button class="faq-q" aria-expanded="false">
+                    <span>Quando é que o meu animal precisa de análises clínicas?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="faq-a">
+                    <p>As análises são recomendadas em várias situações: antes de cirurgias ou anestesia, quando o animal apresenta sintomas como letargia, perda de apetite ou vómitos, em consultas anuais de animais sénior, e para monitorizar doenças crónicas como diabetes ou doença renal.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-q" aria-expanded="false">
+                    <span>O animal precisa de estar em jejum para as análises?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="faq-a">
+                    <p>Para análises de sangue completas, incluindo bioquímica, recomenda-se jejum de 8 a 12 horas para resultados mais precisos, especialmente para valores de glicose e triglicéridos. Para hemograma simples, o jejum não é obrigatório. Confirme sempre com o veterinário.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-q" aria-expanded="false">
+                    <span>Quanto tempo demoram os resultados?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="faq-a">
+                    <p>Muitas análises de rotina, como hemograma e bioquímica básica, podem ter resultados no próprio dia ou em 24 a 48 horas. Análises mais especializadas, como culturas bacterianas ou testes hormonais, podem demorar alguns dias.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-q" aria-expanded="false">
+                    <span>O que é um hemograma veterinário?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="faq-a">
+                    <p>O hemograma é uma análise ao sangue que avalia os glóbulos vermelhos, glóbulos brancos e plaquetas. Permite detetar anemia, infeções, inflamações e outros problemas hematológicos. É uma das análises mais completas e informativas em medicina veterinária.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-q" aria-expanded="false">
+                    <span>As análises clínicas são dolorosas para o animal?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="faq-a">
+                    <p>A colheita de sangue é rápida e minimamente invasiva — semelhante a uma picada de agulha. A maioria dos animais tolera bem o procedimento. A equipa da ViriatuPet's tem cuidado especial em tornar a experiência o mais tranquila possível para o seu animal.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Onda: branco → cream -->
+<div class="svc-wave" style="background:#fff" aria-hidden="true">
+    <svg viewBox="0 0 1440 80" preserveAspectRatio="none">
+        <path d="M0,40 C200,0 400,80 600,40 C800,0 1050,80 1250,40 C1350,20 1400,30 1440,40 L1440,80 L0,80 Z" fill="#FFF6E8"/>
+    </svg>
+</div>
+
+<!-- ========== OUTROS SERVIÇOS ========== -->
+<section class="sec" style="background:var(--cream)">
+    <div class="container">
+        <div style="margin-top:1rem">
+            <div class="section-header" data-aos="fade-up">
+                <div class="section-label teal">Explore mais</div>
+                <h2 class="section-title">Outros serviços</h2>
+            </div>
+            <div class="s-chips">
+                <a href="../consultas/index.html"        class="s-chip" data-aos="fade-up" data-aos-delay="50"><i class="fas fa-stethoscope"></i> Consultas</a>
+                <a href="../vacinacao/index.html"         class="s-chip" data-aos="fade-up" data-aos-delay="100"><i class="fas fa-syringe"></i> Vacinação</a>
+                <a href="../desparasitacao/index.html"    class="s-chip" data-aos="fade-up" data-aos-delay="150"><i class="fas fa-shield-virus"></i> Desparasitação</a>
+                <a href="../microchip/index.html"         class="s-chip" data-aos="fade-up" data-aos-delay="200"><i class="fas fa-microchip"></i> Microchip</a>
+                <a href="../visitas-domicilio/index.html" class="s-chip" data-aos="fade-up" data-aos-delay="250"><i class="fas fa-house-medical"></i> Visitas Domicílio</a>
+                <a href="../nutricao/index.html"          class="s-chip" data-aos="fade-up" data-aos-delay="300"><i class="fas fa-bowl-food"></i> Nutrição</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========== FOOTER ========== -->
+<footer class="footer">
+    <div class="footer-top">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand-col">
+                    <div class="footer-logo">
+                        <img src="../../images/Logo.jpg" alt="ViriatuPet's Logo" class="footer-logo-img">
+                    </div>
+                    <p class="footer-desc">
+                        Cuidamos dos seus animais como se fossem os nossos.
+                        Consultas veterinárias com carinho e profissionalismo em Viseu.
+                    </p>
+                    <div class="footer-socials">
+                        <a href="https://wa.me/351933454251" aria-label="WhatsApp"
+                           target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://www.facebook.com/profile.php?id=61583484770981" aria-label="Facebook"
+                           target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook"></i></a>
+                        <a href="mailto:viriatuspet@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-links-col">
+                    <h4>Navegação</h4>
+                    <ul>
+                        <li><a href="../../index.html#sobre">Sobre nós</a></li>
+                        <li><a href="../../index.html#servicos">Serviços</a></li>
+                        <li><a href="../../index.html#galeria">Galeria</a></li>
+                        <li><a href="../../index.html#testemunhos">Testemunhos</a></li>
+                        <li><a href="../../blog.html">Blog</a></li>
+                        <li><a href="../../index.html#faq">FAQ</a></li>
+                        <li><a href="../../index.html#contactos">Contactos</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-services-col">
+                    <h4>Serviços</h4>
+                    <ul>
+                        <li><a href="../consultas/index.html">Consultas</a></li>
+                        <li><a href="../vacinacao/index.html">Vacinação</a></li>
+                        <li><a href="../desparasitacao/index.html">Desparasitação</a></li>
+                        <li><a href="../microchip/index.html">Microchip</a></li>
+                        <li><a href="./index.html">Análises Clínicas</a></li>
+                        <li><a href="../visitas-domicilio/index.html">Domicílios</a></li>
+                        <li><a href="../nutricao/index.html">Nutrição</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-contact-col">
+                    <h4>Contacto</h4>
+                    <div class="footer-contact-item">
+                        <i class="fas fa-location-dot"></i>
+                        <span>Av. da Europa, Rua A. Barbosa Campos, lote 121, Loja B, 3510-900 Viseu</span>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fas fa-phone"></i>
+                        <a href="tel:+351933454251">933 454 251</a>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:viriatuspet@gmail.com">viriatuspet@gmail.com</a>
+                    </div>
+                    <a href="../../index.html#marcacao" class="btn btn-primary btn-sm footer-cta-btn">Marcar Consulta</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <div class="container">
+            <p>© 2026 ViriatuPet's – Consultório Veterinário, Viseu. Todos os direitos reservados.</p>
+            <div class="footer-bottom-links">
+                <a href="../../privacy.html">Política de Privacidade</a>
+                <span>·</span>
+                <a href="#">Termos e Condições</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- ========== WHATSAPP FLUTUANTE ========== -->
+<a href="https://wa.me/351933454251?text=Ol%C3%A1!%20Gostaria%20de%20marcar%20an%C3%A1lises%20cl%C3%ADnicas%20na%20ViriatuPet%27s."
+   class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Marcar análises via WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+    <span class="wa-tooltip">Marcar Análises</span>
+</a>
+
+<!-- ========== VOLTAR AO TOPO ========== -->
+<button class="back-to-top" id="backToTop" aria-label="Voltar ao topo">
+    <i class="fas fa-chevron-up"></i>
+</button>
+
+<script src="../../js/script.js"></script>
+</body>
+</html>

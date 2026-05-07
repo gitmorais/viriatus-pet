@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desparasitação de Cães e Gatos em Viseu | ViriatuPet's</title>
+    <meta name="description" content="Desparasitação interna e externa de cães e gatos em Viseu. Tratamentos preventivos adaptados ao estilo de vida do seu animal na ViriatuPet's – Consultório Veterinário em Viseu.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://viriatuspets.pt/servicos/desparasitacao/">
+    <link rel="alternate" hreflang="pt-PT" href="https://viriatuspets.pt/servicos/desparasitacao/">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="pt_PT">
+    <meta property="og:title" content="Desparasitação de Cães e Gatos em Viseu | ViriatuPet's">
+    <meta property="og:description" content="Proteja o seu animal e a sua família. Desparasitação interna e externa personalizada para cães e gatos em Viseu.">
+    <meta property="og:url" content="https://viriatuspets.pt/servicos/desparasitacao/">
+    <meta property="og:site_name" content="ViriatuPet's – Consultório Veterinário">
+
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@graph":[{"@type":"MedicalBusiness","@id":"https://viriatuspets.pt/#business","name":"ViriatuPet's – Consultório Veterinário","url":"https://viriatuspets.pt","telephone":"+351933454251","email":"viriatuspet@gmail.com","address":{"@type":"PostalAddress","streetAddress":"Av. da Europa, Rua Alexandre Barbosa Campos, lote 121, Loja B","addressLocality":"Viseu","postalCode":"3510-900","addressCountry":"PT"},"geo":{"@type":"GeoCoordinates","latitude":40.6675621,"longitude":-7.916406}},{"@type":"Service","name":"Desparasitação de Cães e Gatos","description":"Tratamentos de desparasitação interna e externa para cães, gatos e animais exóticos em Viseu. Protocolos adaptados ao estilo de vida e espécie do animal.","provider":{"@id":"https://viriatuspets.pt/#business"},"areaServed":{"@type":"City","name":"Viseu"},"serviceType":"Veterinary Parasite Treatment","url":"https://viriatuspets.pt/servicos/desparasitacao/"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Início","item":"https://viriatuspets.pt/"},{"@type":"ListItem","position":2,"name":"Serviços","item":"https://viriatuspets.pt/servicos/"},{"@type":"ListItem","position":3,"name":"Desparasitação","item":"https://viriatuspets.pt/servicos/desparasitacao/"}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Com que frequência devo desparasitar o meu cão ou gato?","acceptedAnswer":{"@type":"Answer","text":"A desparasitação interna deve ser feita a cada 3 meses em animais adultos. A desparasitação externa (pulgas e carraças) deve ser feita mensalmente ou conforme o produto utilizado. O veterinário adapta a frequência ao estilo de vida do animal."}},{"@type":"Question","name":"Os gatos de interior também precisam de desparasitação?","acceptedAnswer":{"@type":"Answer","text":"Sim. Mesmo gatos de interior estão expostos a parasitas — pulgas podem entrar em casa através de roupas e calçado, e parasitas internos podem ser transmitidos por presas ou terra de plantas. A desparasitação regular é recomendada para todos os gatos."}},{"@type":"Question","name":"Qual a diferença entre desparasitação interna e externa?","acceptedAnswer":{"@type":"Answer","text":"A desparasitação interna combate parasitas intestinais como lombrigas, ténia e giárdia. A desparasitação externa protege contra pulgas, carraças, piolhos e ácaros. Muitos animais precisam de ambas, com produtos e frequências diferentes."}},{"@type":"Question","name":"A desparasitação protege também a família humana?","acceptedAnswer":{"@type":"Answer","text":"Sim. Alguns parasitas de animais são zoonoses — podem ser transmitidos a humanos, especialmente crianças. Manter o animal desparasitado protege toda a família. A ténia e a toxocaríase são exemplos de parasitoses transmissíveis."}},{"@type":"Question","name":"Posso comprar produtos de desparasitação sem receita?","acceptedAnswer":{"@type":"Answer","text":"Alguns produtos estão disponíveis sem receita, mas a eficácia varia muito. O veterinário pode prescrever produtos mais eficazes e adequados ao peso, espécie e estilo de vida do animal, evitando subdosagens ou produtos inadequados."}}]}]}
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&family=Nunito+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../style.css">
+
+    <style>
+        /* ---- Dois tipos de desparasitação (2 large cards) ---- */
+        .desp-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 3rem;
+        }
+        .desp-card {
+            background: #fff;
+            border-radius: var(--r-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            border: 1px solid rgba(43,168,164,.1);
+            transition: transform var(--transition), box-shadow var(--transition);
+        }
+        .desp-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-md); }
+        .desp-card-head {
+            padding: 1.75rem 2rem;
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+        }
+        .desp-card-head.teal   { background: linear-gradient(135deg, var(--teal-dark), var(--teal)); }
+        .desp-card-head.orange { background: linear-gradient(135deg, var(--orange), var(--orange-light)); }
+        .desp-card-head-icon {
+            width: 52px; height: 52px;
+            background: rgba(255,255,255,.2);
+            border-radius: var(--r-sm);
+            display: flex; align-items: center; justify-content: center;
+            font-size: 1.4rem; color: #fff; flex-shrink: 0;
+        }
+        .desp-card-head h3   { font-size: 1.2rem; font-weight: 900; color: #fff; margin-bottom: .25rem; }
+        .desp-card-head p    { font-size: .85rem; color: rgba(255,255,255,.82); }
+        .desp-card-body      { padding: 1.5rem 2rem 2rem; }
+        .desp-card-body > p  { font-size: .95rem; color: var(--text-mid); line-height: 1.7; margin-bottom: 1.25rem; }
+        .desp-bullets {
+            list-style: none;
+            display: flex; flex-direction: column; gap: .65rem;
+            margin-bottom: 1.5rem;
+        }
+        .desp-bullets li {
+            display: flex; align-items: flex-start; gap: .65rem;
+            font-size: .92rem; color: var(--text-mid); line-height: 1.5;
+        }
+        .desp-bullets li i { margin-top: 3px; flex-shrink: 0; font-size: .8rem; }
+        .desp-bullets li i.ti { color: var(--teal); }
+        .desp-bullets li i.oi { color: var(--orange); }
+        .desp-tag {
+            display: inline-flex; align-items: center; gap: .4rem;
+            font-size: 12px; font-weight: 700; padding: .3rem .85rem;
+            border-radius: 50px; letter-spacing: .03em;
+        }
+        .desp-tag.teal   { background: var(--teal-pale);   color: var(--teal-dark); }
+        .desp-tag.orange { background: var(--orange-pale); color: var(--orange); }
+
+        @media (max-width: 640px) {
+            .desp-grid { grid-template-columns: 1fr; }
+            .desp-card-body { padding: 1.25rem 1.25rem 1.5rem; }
+            .desp-card-head { padding: 1.5rem 1.25rem; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- ========== NAVBAR ========== -->
+<nav class="navbar" id="navbar">
+    <div class="container nav-container">
+        <a href="../../index.html" class="nav-brand">
+            <div class="nav-logo-img">
+                <img src="../../images/Logo.jpg" alt="ViriatuPet's Logo">
+            </div>
+            <div class="nav-brand-text">
+                <span class="nav-name">ViriatuPet's</span>
+                <span class="nav-sub">Consultório Veterinário</span>
+            </div>
+        </a>
+
+        <ul class="nav-menu" id="navMenu">
+            <li><a href="../../index.html#sobre"     class="nav-link">Sobre</a></li>
+            <li><a href="../../index.html#equipa"    class="nav-link">Equipa</a></li>
+            <li><a href="../../index.html#servicos"  class="nav-link">Serviços</a></li>
+            <li><a href="../../blog.html"            class="nav-link">Blog</a></li>
+            <li><a href="../../index.html#contactos" class="nav-link">Contactos</a></li>
+            <li><a href="../../index.html#marcacao"  class="nav-cta-btn">Marcar Consulta</a></li>
+        </ul>
+
+        <button class="hamburger" id="hamburger" aria-label="Abrir menu" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
+    </div>
+</nav>
+
+<!-- ========== BREADCRUMB ========== -->
+<div class="breadcrumb">
+    <nav class="container bc-inner" aria-label="Breadcrumb">
+        <a href="../../index.html">Início</a>
+        <span class="bc-sep"><i class="fas fa-chevron-right"></i></span>
+        <a href="../../index.html#servicos">Serviços</a>
+        <span class="bc-sep"><i class="fas fa-chevron-right"></i></span>
+        <span>Desparasitação</span>
+    </nav>
+</div>
+
+<!-- ========== HERO ========== -->
+<header class="svc-hero">
+
+    <div class="svc-hero-paws" aria-hidden="true">
+        <svg class="paw-pattern" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <pattern id="pawPatternHero" patternUnits="userSpaceOnUse" width="330" height="330">
+                    <g fill="rgba(255,255,255,0.06)" transform="rotate(-20, 165, 155)">
+                        <ellipse cx="165" cy="155" rx="55" ry="43"/>
+                        <ellipse cx="94"  cy="100" rx="19" ry="23"/>
+                        <ellipse cx="142" cy="82"  rx="19" ry="23"/>
+                        <ellipse cx="188" cy="82"  rx="19" ry="23"/>
+                        <ellipse cx="236" cy="100" rx="19" ry="23"/>
+                    </g>
+                </pattern>
+            </defs>
+            <rect width="100%" height="100%" fill="url(#pawPatternHero)"/>
+        </svg>
+    </div>
+
+    <div class="svc-hero-inner">
+        <div data-aos="fade-up">
+            <div class="svc-hero-badge"><i class="fas fa-shield-virus"></i> Serviço Veterinário</div>
+            <h1>Desparasitação de Cães e Gatos em Viseu</h1>
+            <p>Proteja o seu animal e a sua família. Tratamentos preventivos internos e externos, adaptados ao estilo de vida, peso e espécie do seu companheiro.</p>
+            <div class="svc-hero-actions">
+                <a href="https://wa.me/351933454251?text=Ol%C3%A1!%20Gostaria%20de%20marcar%20uma%20desparasita%C3%A7%C3%A3o%20na%20ViriatuPet%27s."
+                   class="btn btn-whatsapp" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-whatsapp"></i> Marcar Desparasitação
+                </a>
+                <a href="../../index.html#marcacao" class="btn btn-outline-white">
+                    <i class="far fa-calendar-alt"></i> Formulário Online
+                </a>
+            </div>
+            <div class="svc-hero-chips">
+                <span class="svc-hero-chip"><i class="fas fa-dog"></i> Cães</span>
+                <span class="svc-hero-chip"><i class="fas fa-cat"></i> Gatos</span>
+                <span class="svc-hero-chip"><i class="fas fa-shield-virus"></i> Interna &amp; Externa</span>
+                <span class="svc-hero-chip"><i class="fas fa-house-user"></i> Protege a família</span>
+                <span class="svc-hero-chip"><i class="fas fa-pills"></i> Produto adequado ao animal</span>
+            </div>
+        </div>
+
+        <div class="svc-hero-img" data-aos="fade-left">
+            <img src="../../images/Desparasitação em Cães 16.9.jpeg"
+                 alt="Desparasitação de cão na ViriatuPet's – Consultório Veterinário em Viseu"
+                 width="600" height="420" loading="eager">
+            <div class="svc-hero-img-badge">
+                <div class="svc-hero-img-badge-icon"><i class="fas fa-shield-virus"></i></div>
+                <div>
+                    <strong>Proteção completa</strong>
+                    <span>Interna e externa</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="hero-wave" aria-hidden="true">
+        <svg viewBox="0 0 1440 100" preserveAspectRatio="none">
+            <path d="M0,50 C200,100 400,0 600,50 C800,100 1050,0 1250,50 C1350,75 1400,60 1440,50 L1440,100 L0,100 Z" fill="#FFF6E8"/>
+        </svg>
+    </div>
+</header>
+
+<!-- ========== INTERNA VS EXTERNA ========== -->
+<section class="sec paw-section" style="background:var(--cream)">
+
+    <div class="paw-section-bg" aria-hidden="true">
+        <svg xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <pattern id="pawPatternCream1" patternUnits="userSpaceOnUse" width="240" height="180">
+                    <g fill="rgba(43,168,164,0.055)">
+                        <g transform="rotate(-18, 52, 50)">
+                            <ellipse cx="52" cy="50" rx="14" ry="11"/>
+                            <ellipse cx="34" cy="36" rx="5" ry="6"/>
+                            <ellipse cx="46" cy="31" rx="5" ry="6"/>
+                            <ellipse cx="58" cy="31" rx="5" ry="6"/>
+                            <ellipse cx="70" cy="36" rx="5" ry="6"/>
+                        </g>
+                        <g transform="rotate(20, 182, 44)">
+                            <ellipse cx="182" cy="44" rx="14" ry="11"/>
+                            <ellipse cx="164" cy="30" rx="5" ry="6"/>
+                            <ellipse cx="176" cy="25" rx="5" ry="6"/>
+                            <ellipse cx="188" cy="25" rx="5" ry="6"/>
+                            <ellipse cx="200" cy="30" rx="5" ry="6"/>
+                        </g>
+                        <g transform="rotate(-32, 112, 136)">
+                            <ellipse cx="112" cy="136" rx="14" ry="11"/>
+                            <ellipse cx="94"  cy="122" rx="5" ry="6"/>
+                            <ellipse cx="106" cy="117" rx="5" ry="6"/>
+                            <ellipse cx="118" cy="117" rx="5" ry="6"/>
+                            <ellipse cx="130" cy="122" rx="5" ry="6"/>
+                        </g>
+                    </g>
+                </pattern>
+            </defs>
+            <rect width="100%" height="100%" fill="url(#pawPatternCream1)"/>
+        </svg>
+    </div>
+
+    <div class="container" data-aos="fade-up">
+        <div class="section-header">
+            <div class="section-label">Dois tipos de proteção</div>
+            <h2 class="section-title">Interna e externa — <span style="color:var(--teal)">proteção a 360º</span></h2>
+            <p class="section-subtitle">Os parasitas atacam por dentro e por fora. Uma desparasitação completa cobre ambas as frentes.</p>
+        </div>
+
+        <div class="desp-grid">
+            <div class="desp-card" data-aos="fade-up" data-aos-delay="50">
+                <div class="desp-card-head teal">
+                    <div class="desp-card-head-icon"><i class="fas fa-bug"></i></div>
+                    <div>
+                        <h3>Desparasitação Interna</h3>
+                        <p>Combate parasitas intestinais</p>
+                    </div>
+                </div>
+                <div class="desp-card-body">
+                    <p>Elimina lombrigas, ténias, ancilostomas, giárdia e outros parasitas que vivem no sistema digestivo do animal — muitas vezes sem sintomas visíveis.</p>
+                    <ul class="desp-bullets">
+                        <li><i class="fas fa-check ti"></i> Comprimido ou pasta oral</li>
+                        <li><i class="fas fa-check ti"></i> A cada 3 meses em adultos</li>
+                        <li><i class="fas fa-check ti"></i> Mensalmente em cachorros até 6 meses</li>
+                        <li><i class="fas fa-check ti"></i> Obrigatória antes de qualquer vacinação</li>
+                    </ul>
+                    <span class="desp-tag teal"><i class="fas fa-paw"></i> Recomendada para todos os animais</span>
+                </div>
+            </div>
+
+            <div class="desp-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="desp-card-head orange">
+                    <div class="desp-card-head-icon"><i class="fas fa-shield-alt"></i></div>
+                    <div>
+                        <h3>Desparasitação Externa</h3>
+                        <p>Combate pulgas, carraças e ácaros</p>
+                    </div>
+                </div>
+                <div class="desp-card-body">
+                    <p>Protege o animal de parasitas que vivem no pelo e na pele — pulgas, carraças, piolhos e ácaros. Muitos transmitem doenças graves como a leishmaniose.</p>
+                    <ul class="desp-bullets">
+                        <li><i class="fas fa-check oi"></i> Pipeta, coleira ou comprimido</li>
+                        <li><i class="fas fa-check oi"></i> Mensal ou conforme o produto</li>
+                        <li><i class="fas fa-check oi"></i> Especialmente importante em Viseu (zona rural/florestal)</li>
+                        <li><i class="fas fa-check oi"></i> Protege também o ambiente doméstico</li>
+                    </ul>
+                    <span class="desp-tag orange"><i class="fas fa-map-marker-alt"></i> Especialmente importante em Viseu</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Onda: cream → branco -->
+<div class="svc-wave" style="background:var(--cream)" aria-hidden="true">
+    <svg viewBox="0 0 1440 80" preserveAspectRatio="none">
+        <path d="M0,40 C200,0 400,80 600,40 C800,0 1050,80 1250,40 C1350,20 1400,30 1440,40 L1440,80 L0,80 Z" fill="#ffffff"/>
+    </svg>
+</div>
+
+<!-- ========== PORQUÊ É IMPORTANTE ========== -->
+<section class="sec" style="background:#fff">
+    <div class="container">
+        <div class="split">
+            <div class="split-img" data-aos="fade-right">
+                <img src="../../images/Desparasitação em Cães 4.3.jpeg"
+                     alt="Desparasitação de cão na ViriatuPet's em Viseu" width="580" height="460" loading="lazy">
+                <div class="split-img-tag">🐾 ViriatuPet's, Viseu</div>
+            </div>
+            <div data-aos="fade-left">
+                <div class="section-label">Porquê é importante</div>
+                <h2 class="section-title">Protege o animal — <span style="color:var(--teal)">e a sua família</span></h2>
+                <p style="color:var(--text-mid);margin-bottom:.5rem;font-size:.97rem;line-height:1.7">Alguns parasitas de animais são zoonoses — podem ser transmitidos a humanos, especialmente crianças. Desparasitar o seu animal é um ato de saúde pública.</p>
+                <ul class="check-list">
+                    <li>A ténia e a toxocaríase são transmissíveis a humanos</li>
+                    <li>Pulgas podem infestar a casa inteira em dias</li>
+                    <li>Carraças transmitem doenças graves como a erliquiose</li>
+                    <li>Em Viseu, o risco de leishmaniose por carraças é real</li>
+                    <li>Animais de interior também estão expostos</li>
+                    <li>Cachorros e gatinhos são especialmente vulneráveis</li>
+                </ul>
+                <a href="https://wa.me/351933454251?text=Ol%C3%A1!%20Gostaria%20de%20marcar%20uma%20desparasita%C3%A7%C3%A3o%20na%20ViriatuPet%27s."
+                   class="btn btn-primary" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-whatsapp"></i> Marcar Desparasitação
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========== CALENDÁRIO DE DESPARASITAÇÃO ========== -->
+<section class="teal-section paw-section" style="padding:0">
+
+    <!-- Onda superior: branco → teal -->
+    <div class="svc-wave" aria-hidden="true">
+        <svg viewBox="0 0 1440 80" preserveAspectRatio="none">
+            <path d="M0,40 C200,80 400,0 600,40 C800,80 1050,0 1250,40 C1350,60 1400,50 1440,40 L1440,0 L0,0 Z" fill="#ffffff"/>
+        </svg>
+    </div>
+
+    <div class="paw-section-bg" aria-hidden="true">
+        <svg xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <pattern id="pawPatternTeal" patternUnits="userSpaceOnUse" width="240" height="180">
+                    <g fill="rgba(255,255,255,0.05)">
+                        <g transform="rotate(-15, 58, 52)">
+                            <ellipse cx="58" cy="52" rx="14" ry="11"/>
+                            <ellipse cx="40" cy="38" rx="5" ry="6"/>
+                            <ellipse cx="52" cy="33" rx="5" ry="6"/>
+                            <ellipse cx="64" cy="33" rx="5" ry="6"/>
+                            <ellipse cx="76" cy="38" rx="5" ry="6"/>
+                        </g>
+                        <g transform="rotate(22, 188, 48)">
+                            <ellipse cx="188" cy="48" rx="14" ry="11"/>
+                            <ellipse cx="170" cy="34" rx="5" ry="6"/>
+                            <ellipse cx="182" cy="29" rx="5" ry="6"/>
+                            <ellipse cx="194" cy="29" rx="5" ry="6"/>
+                            <ellipse cx="206" cy="34" rx="5" ry="6"/>
+                        </g>
+                        <g transform="rotate(-30, 115, 142)">
+                            <ellipse cx="115" cy="142" rx="14" ry="11"/>
+                            <ellipse cx="97"  cy="128" rx="5" ry="6"/>
+                            <ellipse cx="109" cy="123" rx="5" ry="6"/>
+                            <ellipse cx="121" cy="123" rx="5" ry="6"/>
+                            <ellipse cx="133" cy="128" rx="5" ry="6"/>
+                        </g>
+                    </g>
+                </pattern>
+            </defs>
+            <rect width="100%" height="100%" fill="url(#pawPatternTeal)"/>
+        </svg>
+    </div>
+
+    <div class="container" style="padding-top:3rem;padding-bottom:1rem;position:relative;z-index:1">
+        <div class="section-header" data-aos="fade-up">
+            <div class="section-label light">Com que frequência</div>
+            <h2 class="section-title light">Calendário de desparasitação</h2>
+            <p class="section-subtitle light">A frequência certa depende da idade e estilo de vida do animal. Aqui fica o guia de referência.</p>
+        </div>
+
+        <div class="cal-grid" data-aos="fade-up">
+            <div class="cal-card" data-aos="fade-up" data-aos-delay="50">
+                <div class="cal-head">
+                    <div class="cal-age">Até 6 meses</div>
+                    <div class="cal-who">Cachorro / Gatinho</div>
+                </div>
+                <div class="cal-body">
+                    <div class="cal-item"><div class="cal-dot"></div>Interna: de 2 em 2 semanas até 3 meses</div>
+                    <div class="cal-item"><div class="cal-dot"></div>Interna: mensal dos 3 aos 6 meses</div>
+                    <div class="cal-item"><div class="cal-dot"></div>Externa: mensal desde as 8 semanas</div>
+                </div>
+            </div>
+            <div class="cal-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="cal-head">
+                    <div class="cal-age">Adulto saudável</div>
+                    <div class="cal-who">Cão / Gato</div>
+                </div>
+                <div class="cal-body">
+                    <div class="cal-item"><div class="cal-dot"></div>Interna: a cada 3 meses</div>
+                    <div class="cal-item"><div class="cal-dot"></div>Externa: mensal (pipeta/comprimido)</div>
+                    <div class="cal-item"><div class="cal-dot"></div>Ou coleira com duração de 4–8 meses</div>
+                </div>
+            </div>
+            <div class="cal-card" data-aos="fade-up" data-aos-delay="150">
+                <div class="cal-head">
+                    <div class="cal-age">Acesso ao exterior</div>
+                    <div class="cal-who">Cão / Gato ativo</div>
+                </div>
+                <div class="cal-body">
+                    <div class="cal-item"><div class="cal-dot"></div>Interna: a cada 1–3 meses</div>
+                    <div class="cal-item"><div class="cal-dot"></div>Externa: mensal obrigatório</div>
+                    <div class="cal-item"><div class="cal-dot"></div>Revisão veterinária anual do protocolo</div>
+                </div>
+            </div>
+            <div class="cal-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="cal-head orange">
+                    <div class="cal-age">Fêmea gestante</div>
+                    <div class="cal-who">Protocolo especial</div>
+                </div>
+                <div class="cal-body">
+                    <div class="cal-item"><div class="cal-dot o"></div>Produtos seguros para gestação</div>
+                    <div class="cal-item"><div class="cal-dot o"></div>Desparasitação antes do parto</div>
+                    <div class="cal-item"><div class="cal-dot o"></div>Cachorros/gatinhos tratados desde o nascimento</div>
+                    <div class="cal-item"><div class="cal-dot o"></div>Consulte sempre o veterinário</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Onda inferior: teal → cream -->
+    <div class="svc-wave" aria-hidden="true" style="position:relative;z-index:1">
+        <svg viewBox="0 0 1440 80" preserveAspectRatio="none">
+            <path d="M0,40 C200,0 400,80 600,40 C800,0 1050,80 1250,40 C1350,20 1400,30 1440,40 L1440,80 L0,80 Z" fill="#FFF6E8"/>
+        </svg>
+    </div>
+</section>
+
+<!-- Onda: cream → escuro -->
+<div class="svc-wave" style="background:var(--cream)" aria-hidden="true">
+    <svg viewBox="0 0 1440 80" preserveAspectRatio="none">
+        <path d="M0,40 C200,0 400,80 600,40 C800,0 1050,80 1250,40 C1350,20 1400,30 1440,40 L1440,80 L0,80 Z" fill="#1A3535"/>
+    </svg>
+</div>
+
+<!-- ========== CTA ESCURA ========== -->
+<section class="cta-band">
+    <div class="container cta-band-inner">
+        <div class="cta-band-text" data-aos="fade-up">
+            <h2>O seu animal está protegido?</h2>
+            <p>Não espere por sintomas. A desparasitação regular é simples, rápida e protege toda a família.</p>
+        </div>
+        <div class="cta-band-btns" data-aos="fade-up" data-aos-delay="100">
+            <a href="https://wa.me/351933454251?text=Ol%C3%A1!%20Gostaria%20de%20marcar%20uma%20desparasita%C3%A7%C3%A3o%20na%20ViriatuPet%27s."
+               class="btn btn-whatsapp" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-whatsapp"></i> Marcar via WhatsApp
+            </a>
+            <a href="tel:+351933454251" class="btn btn-phone-lg">
+                <i class="fas fa-phone"></i> 933 454 251
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Onda: escuro → branco -->
+<div class="svc-wave" style="background:#1A3535" aria-hidden="true">
+    <svg viewBox="0 0 1440 80" preserveAspectRatio="none">
+        <path d="M0,40 C200,0 400,80 600,40 C800,0 1050,80 1250,40 C1350,20 1400,30 1440,40 L1440,80 L0,80 Z" fill="#ffffff"/>
+    </svg>
+</div>
+
+<!-- ========== FAQ ========== -->
+<section class="sec" style="background:#fff; padding-bottom:2rem">
+    <div class="container">
+        <div class="section-header" data-aos="fade-up">
+            <div class="section-label">FAQ</div>
+            <h2 class="section-title">Perguntas frequentes</h2>
+        </div>
+
+        <div class="faq-list" data-aos="fade-up">
+            <div class="faq-item">
+                <button class="faq-q" aria-expanded="false">
+                    <span>Com que frequência devo desparasitar o meu cão ou gato?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="faq-a">
+                    <p>A desparasitação interna deve ser feita a cada 3 meses em animais adultos. A desparasitação externa (pulgas e carraças) deve ser feita mensalmente ou conforme o produto utilizado. O veterinário adapta a frequência ao estilo de vida do animal.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-q" aria-expanded="false">
+                    <span>Os gatos de interior também precisam de desparasitação?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="faq-a">
+                    <p>Sim. Mesmo gatos de interior estão expostos a parasitas — pulgas podem entrar em casa através de roupas e calçado, e parasitas internos podem ser transmitidos por presas ou terra de plantas. A desparasitação regular é recomendada para todos os gatos.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-q" aria-expanded="false">
+                    <span>Qual a diferença entre desparasitação interna e externa?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="faq-a">
+                    <p>A desparasitação interna combate parasitas intestinais como lombrigas, ténia e giárdia. A desparasitação externa protege contra pulgas, carraças, piolhos e ácaros. Muitos animais precisam de ambas, com produtos e frequências diferentes.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-q" aria-expanded="false">
+                    <span>A desparasitação protege também a família humana?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="faq-a">
+                    <p>Sim. Alguns parasitas de animais são zoonoses — podem ser transmitidos a humanos, especialmente crianças. Manter o animal desparasitado protege toda a família. A ténia e a toxocaríase são exemplos de parasitoses transmissíveis.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-q" aria-expanded="false">
+                    <span>Posso comprar produtos de desparasitação sem receita?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <div class="faq-a">
+                    <p>Alguns produtos estão disponíveis sem receita, mas a eficácia varia muito. O veterinário pode prescrever produtos mais eficazes e adequados ao peso, espécie e estilo de vida do animal, evitando subdosagens ou produtos inadequados.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Onda: branco → cream -->
+<div class="svc-wave" style="background:#fff" aria-hidden="true">
+    <svg viewBox="0 0 1440 80" preserveAspectRatio="none">
+        <path d="M0,40 C200,0 400,80 600,40 C800,0 1050,80 1250,40 C1350,20 1400,30 1440,40 L1440,80 L0,80 Z" fill="#FFF6E8"/>
+    </svg>
+</div>
+
+<!-- ========== ARTIGO + OUTROS SERVIÇOS ========== -->
+<section class="sec" style="background:var(--cream)">
+    <div class="container">
+
+        <div class="svc-blog-card" data-aos="fade-up">
+            <div>
+                <p class="svc-blog-card-ey"><i class="fas fa-book-open"></i> Artigo do Blog</p>
+                <h3>Desparasitação em Cães e Gatos: Quando, Como e Porquê</h3>
+                <p>Guia completo sobre parasitas internos e externos, frequência de tratamento e como proteger o seu animal e a sua família.</p>
+            </div>
+            <a href="../../blog/desparasitacao-caes-gatos.html" class="btn btn-outline-teal">
+                Ler artigo <i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
+
+        <div style="margin-top:3.5rem">
+            <div class="section-header" data-aos="fade-up">
+                <div class="section-label teal">Explore mais</div>
+                <h2 class="section-title">Outros serviços</h2>
+            </div>
+            <div class="s-chips">
+                <a href="../consultas/index.html"         class="s-chip" data-aos="fade-up" data-aos-delay="50"><i class="fas fa-stethoscope"></i> Consultas</a>
+                <a href="../vacinacao/index.html"          class="s-chip" data-aos="fade-up" data-aos-delay="100"><i class="fas fa-syringe"></i> Vacinação</a>
+                <a href="../microchip/index.html"          class="s-chip" data-aos="fade-up" data-aos-delay="150"><i class="fas fa-microchip"></i> Microchip</a>
+                <a href="../analises-clinicas/index.html"  class="s-chip" data-aos="fade-up" data-aos-delay="200"><i class="fas fa-flask-vial"></i> Análises Clínicas</a>
+                <a href="../visitas-domicilio/index.html"  class="s-chip" data-aos="fade-up" data-aos-delay="250"><i class="fas fa-house-medical"></i> Visitas Domicílio</a>
+                <a href="../nutricao/index.html"           class="s-chip" data-aos="fade-up" data-aos-delay="300"><i class="fas fa-bowl-food"></i> Nutrição</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========== FOOTER ========== -->
+<footer class="footer">
+    <div class="footer-top">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand-col">
+                    <div class="footer-logo">
+                        <img src="../../images/Logo.jpg" alt="ViriatuPet's Logo" class="footer-logo-img">
+                    </div>
+                    <p class="footer-desc">
+                        Cuidamos dos seus animais como se fossem os nossos.
+                        Consultas veterinárias com carinho e profissionalismo em Viseu.
+                    </p>
+                    <div class="footer-socials">
+                        <a href="https://wa.me/351933454251" aria-label="WhatsApp"
+                           target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://www.facebook.com/profile.php?id=61583484770981" aria-label="Facebook"
+                           target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook"></i></a>
+                        <a href="mailto:viriatuspet@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-links-col">
+                    <h4>Navegação</h4>
+                    <ul>
+                        <li><a href="../../index.html#sobre">Sobre nós</a></li>
+                        <li><a href="../../index.html#servicos">Serviços</a></li>
+                        <li><a href="../../index.html#galeria">Galeria</a></li>
+                        <li><a href="../../index.html#testemunhos">Testemunhos</a></li>
+                        <li><a href="../../blog.html">Blog</a></li>
+                        <li><a href="../../index.html#faq">FAQ</a></li>
+                        <li><a href="../../index.html#contactos">Contactos</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-services-col">
+                    <h4>Serviços</h4>
+                    <ul>
+                        <li><a href="../consultas/index.html">Consultas</a></li>
+                        <li><a href="../vacinacao/index.html">Vacinação</a></li>
+                        <li><a href="./index.html">Desparasitação</a></li>
+                        <li><a href="../microchip/index.html">Microchip</a></li>
+                        <li><a href="../analises-clinicas/index.html">Análises Clínicas</a></li>
+                        <li><a href="../visitas-domicilio/index.html">Domicílios</a></li>
+                        <li><a href="../nutricao/index.html">Nutrição</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-contact-col">
+                    <h4>Contacto</h4>
+                    <div class="footer-contact-item">
+                        <i class="fas fa-location-dot"></i>
+                        <span>Av. da Europa, Rua A. Barbosa Campos, lote 121, Loja B, 3510-900 Viseu</span>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fas fa-phone"></i>
+                        <a href="tel:+351933454251">933 454 251</a>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:viriatuspet@gmail.com">viriatuspet@gmail.com</a>
+                    </div>
+                    <a href="../../index.html#marcacao" class="btn btn-primary btn-sm footer-cta-btn">Marcar Consulta</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <div class="container">
+            <p>© 2026 ViriatuPet's – Consultório Veterinário, Viseu. Todos os direitos reservados.</p>
+            <div class="footer-bottom-links">
+                <a href="../../privacy.html">Política de Privacidade</a>
+                <span>·</span>
+                <a href="#">Termos e Condições</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- ========== WHATSAPP FLUTUANTE ========== -->
+<a href="https://wa.me/351933454251?text=Ol%C3%A1!%20Gostaria%20de%20marcar%20uma%20desparasita%C3%A7%C3%A3o%20na%20ViriatuPet%27s."
+   class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Marcar desparasitação via WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+    <span class="wa-tooltip">Marcar Desparasitação</span>
+</a>
+
+<!-- ========== VOLTAR AO TOPO ========== -->
+<button class="back-to-top" id="backToTop" aria-label="Voltar ao topo">
+    <i class="fas fa-chevron-up"></i>
+</button>
+
+<script src="../../js/script.js"></script>
+</body>
+</html>

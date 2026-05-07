@@ -290,6 +290,45 @@ h1, h2, h3, h4 {
 .hamburger.active span:nth-child(2) { opacity: 0; }
 .hamburger.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
 
+/* ---- Navbar dropdown ---- */
+.nav-item-dropdown { position: relative; }
+.nav-caret { font-size: .6rem; margin-left: 3px; vertical-align: middle; transition: transform var(--transition); }
+.nav-item-dropdown:hover .nav-caret { transform: rotate(180deg); }
+.nav-dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #fff;
+    min-width: 215px;
+    border-radius: var(--r-md);
+    box-shadow: var(--shadow-lg);
+    /* padding-top bridges the visual gap without a hover dead-zone */
+    padding: .5rem 0 .4rem;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-4px);
+    transition: opacity var(--transition), visibility var(--transition), transform var(--transition);
+    z-index: 200;
+    list-style: none;
+}
+.nav-item-dropdown:hover .nav-dropdown,
+.nav-item-dropdown.open  .nav-dropdown { opacity: 1; visibility: visible; transform: translateY(0); }
+.nav-item-dropdown.open  .nav-caret    { transform: rotate(180deg); }
+.nav-dropdown li { display: block; }
+.nav-dropdown a {
+    display: flex;
+    align-items: center;
+    gap: .55rem;
+    padding: .52rem 1.1rem;
+    font-size: .875rem;
+    color: var(--text-mid);
+    font-weight: 600;
+    white-space: nowrap;
+    transition: background var(--transition), color var(--transition);
+}
+.nav-dropdown a:hover { background: var(--teal-pale); color: var(--teal-dark); }
+.nav-dropdown a i { width: 15px; text-align: center; color: var(--teal); font-size: .78rem; flex-shrink: 0; }
+
 /* ---- 6. Hero ---- */
 .hero {
     position: relative;
@@ -779,6 +818,20 @@ h1, h2, h3, h4 {
     color: rgba(255,255,255,.78);
     line-height: 1.65;
 }
+
+.service-card-link {
+    display: inline-flex;
+    align-items: center;
+    gap: .4rem;
+    margin-top: .85rem;
+    font-size: .84rem;
+    font-weight: 700;
+    color: rgba(255,255,255,.8);
+    text-decoration: none;
+    transition: color var(--transition), gap var(--transition);
+}
+.service-card-link:hover { color: #fff; gap: .65rem; }
+.service-card-link i { font-size: .72rem; }
 
 .services-bottom-cta {
     text-align: center;
@@ -1684,6 +1737,20 @@ h1, h2, h3, h4 {
     .nav-link:hover { background: var(--teal-pale); color: var(--teal-dark); }
     .nav-cta-btn { margin: 8px 0 0; text-align: center; justify-content: center; }
     .hamburger { display: flex; }
+    /* Dropdown: always expanded inline inside the mobile menu overlay */
+    .nav-dropdown {
+        position: static;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        box-shadow: none;
+        background: var(--teal-pale);
+        border-radius: var(--r-sm);
+        padding: .2rem 0;
+        margin: 2px 0 4px 12px;
+    }
+    .nav-dropdown a { padding: .6rem 1rem; font-size: .95rem; color: var(--text); }
+    .nav-caret { display: none; }
 
     .navbar { padding: 12px 0; background: var(--teal-dark); }
 

@@ -68,6 +68,7 @@ document.addEventListener('click', e => {
 /* ---- Smooth scrolling for anchor links ---- */
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', e => {
+        if (anchor.closest('.nav-item-dropdown')) return;
         const targetId = anchor.getAttribute('href');
         if (targetId === '#') return;
         const target = document.querySelector(targetId);
@@ -232,6 +233,26 @@ window.resetForm = function () {
     document.querySelectorAll('.form-err.visible').forEach(el => el.classList.remove('visible'));
     document.querySelectorAll('.error').forEach(el => el.classList.remove('error'));
 };
+
+/* ---- Navbar dropdown toggle ---- */
+document.querySelectorAll('.nav-item-dropdown').forEach(item => {
+    const trigger = item.querySelector(':scope > .nav-link');
+    if (!trigger) return;
+    trigger.addEventListener('click', e => {
+        if (window.innerWidth > 768) {
+            e.preventDefault();
+            item.classList.toggle('open');
+            document.querySelectorAll('.nav-item-dropdown').forEach(other => {
+                if (other !== item) other.classList.remove('open');
+            });
+        }
+    });
+});
+document.addEventListener('click', e => {
+    if (!e.target.closest('.nav-item-dropdown')) {
+        document.querySelectorAll('.nav-item-dropdown.open').forEach(d => d.classList.remove('open'));
+    }
+});
 
 /* ---- Active nav link highlight on scroll ---- */
 const sections = document.querySelectorAll('section[id]');
