@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serviços Veterinários em Viseu | ViriatuPet's</title>
+    <meta name="description" content="Serviços veterinários completos em Viseu — consultas, vacinação, desparasitação, microchip, análises clínicas, visitas ao domicílio e nutrição. ViriatuPet's Consultório Veterinário.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://viriatuspets.pt/servicos/">
+    <link rel="alternate" hreflang="pt-PT" href="https://viriatuspets.pt/servicos/">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="pt_PT">
+    <meta property="og:title" content="Serviços Veterinários em Viseu | ViriatuPet's">
+    <meta property="og:description" content="Todos os serviços veterinários da ViriatuPet's em Viseu — consultas, vacinação, desparasitação, microchip, análises clínicas, visitas ao domicílio e nutrição.">
+    <meta property="og:url" content="https://viriatuspets.pt/servicos/">
+    <meta property="og:site_name" content="ViriatuPet's – Consultório Veterinário">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "MedicalBusiness",
+          "@id": "https://viriatuspets.pt/#business",
+          "name": "ViriatuPet's – Consultório Veterinário",
+          "url": "https://viriatuspets.pt",
+          "telephone": "+351933454251",
+          "email": "viriatuspet@gmail.com",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Av. da Europa, Rua Alexandre Barbosa Campos, lote 121, Loja B",
+            "addressLocality": "Viseu",
+            "postalCode": "3510-900",
+            "addressCountry": "PT"
+          },
+          "geo": { "@type": "GeoCoordinates", "latitude": 40.6675621, "longitude": -7.916406 },
+          "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Serviços Veterinários",
+            "itemListElement": [
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Consultas Veterinárias", "url": "https://viriatuspets.pt/servicos/consultas/" } },
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Vacinação", "url": "https://viriatuspets.pt/servicos/vacinacao/" } },
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Desparasitação", "url": "https://viriatuspets.pt/servicos/desparasitacao/" } },
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Microchip", "url": "https://viriatuspets.pt/servicos/microchip/" } },
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Análises Clínicas", "url": "https://viriatuspets.pt/servicos/analises-clinicas/" } },
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Visitas ao Domicílio", "url": "https://viriatuspets.pt/servicos/visitas-domicilio/" } },
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Nutrição", "url": "https://viriatuspets.pt/servicos/nutricao/" } }
+            ]
+          }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Início", "item": "https://viriatuspets.pt/" },
+            { "@type": "ListItem", "position": 2, "name": "Serviços", "item": "https://viriatuspets.pt/servicos/" }
+          ]
+        }
+      ]
+    }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&family=Nunito+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/blog.css">
+    <link rel="stylesheet" href="./style.css">
+
+    <style>
+        /* ---- Centered hero (no image column) ---- */
+        .svc-hero-centered {
+            grid-template-columns: 1fr;
+            max-width: 760px;
+            text-align: center;
+            padding-bottom: 3.5rem;
+        }
+        .svc-hero-centered h1 { max-width: 100%; }
+        .svc-hero-centered p  { max-width: 580px; margin-left: auto; margin-right: auto; }
+        .svc-hero-centered .svc-hero-actions { justify-content: center; }
+        .svc-hero-centered .svc-hero-chips   { justify-content: center; }
+
+        /* ---- Service hub cards ---- */
+        .hub-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            margin-top: 3rem;
+        }
+        .hub-grid > :nth-child(7):last-child { grid-column: 2; }
+
+        .hub-card {
+            background: #fff;
+            border-radius: var(--r-lg);
+            padding: 2rem 1.75rem;
+            border: 1px solid rgba(43,168,164,.12);
+            box-shadow: var(--shadow-sm);
+            display: flex;
+            flex-direction: column;
+            transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+        }
+        .hub-card:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-md);
+            border-color: rgba(43,168,164,.28);
+        }
+        .hub-icon {
+            width: 64px;
+            height: 64px;
+            background: var(--teal-pale);
+            border-radius: var(--r-md);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 26px;
+            color: var(--teal);
+            margin-bottom: 1.25rem;
+            flex-shrink: 0;
+        }
+        .hub-card h3 {
+            font-size: 1.1rem;
+            font-weight: 800;
+            color: var(--text);
+            margin-bottom: .5rem;
+        }
+        .hub-card > p {
+            font-size: .9rem;
+            color: var(--text-mid);
+            line-height: 1.65;
+            margin-bottom: 1rem;
+        }
+        .hub-bullets {
+            list-style: none;
+            margin: 0 0 1.5rem;
+            display: flex;
+            flex-direction: column;
+            gap: .4rem;
+            flex: 1;
+        }
+        .hub-bullets li {
+            font-size: .85rem;
+            color: var(--text-mid);
+            padding-left: 1.2rem;
+            position: relative;
+            line-height: 1.5;
+        }
+        .hub-bullets li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 7px;
+            width: 7px;
+            height: 7px;
+            background: var(--teal);
+            border-radius: 50%;
+        }
+        .hub-link {
+            display: inline-flex;
+            align-items: center;
+            gap: .5rem;
+            font-size: .9rem;
+            font-weight: 700;
+            color: var(--teal);
+            transition: color var(--transition), gap var(--transition);
+            margin-top: auto;
+        }
+        .hub-link:hover { color: var(--teal-dark); gap: .75rem; }
+
+        /* ---- Trust stats bar ---- */
+        .trust-stats {
+            display: flex;
+            align-items: stretch;
+            justify-content: center;
+            flex-wrap: wrap;
+            padding: 3.5rem 0;
+        }
+        .trust-stat {
+            flex: 1;
+            min-width: 180px;
+            text-align: center;
+            padding: 1.25rem 2rem;
+            position: relative;
+        }
+        .trust-stat + .trust-stat::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            height: 52px;
+            width: 1px;
+            background: var(--cream-dark);
+        }
+        .trust-stat-icon {
+            font-size: 1.9rem;
+            color: var(--teal);
+            margin-bottom: .6rem;
+        }
+        .trust-stat-title {
+            font-size: 1rem;
+            font-weight: 800;
+            color: var(--text);
+            margin-bottom: .2rem;
+        }
+        .trust-stat-sub {
+            font-size: .8rem;
+            color: var(--text-light);
+        }
+
+        /* ---- Blog section on cream + paw ---- */
+        .blog-preview-cream { background: var(--cream); }
+        .blog-preview-cream .blog-card { background: #fff; border-color: rgba(43,168,164,.12); }
+
+        /* ---- Responsive ---- */
+        @media (max-width: 1024px) {
+            .hub-grid { grid-template-columns: repeat(2, 1fr); }
+            .hub-grid > :nth-child(7):last-child { grid-column: auto; }
+            .hub-grid > :nth-child(7):last-child:nth-child(odd) {
+                grid-column: 1 / -1;
+                max-width: 400px;
+                margin: 0 auto;
+            }
+        }
+        @media (max-width: 768px) {
+            .hub-grid { grid-template-columns: 1fr; }
+            .hub-grid > :nth-child(7):last-child:nth-child(odd) { grid-column: auto; max-width: none; margin: 0; }
+            .trust-stats { flex-direction: column; align-items: center; }
+            .trust-stat + .trust-stat::before { display: none; }
+            .trust-stat { border-top: 1px solid var(--cream-dark); padding: 1.25rem 1rem; }
+            .trust-stat:first-child { border-top: none; }
+        }
+        @media (max-width: 600px) {
+            .blog-preview-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- ========== NAVBAR ========== -->
+<nav class="navbar" id="navbar">
+    <div class="container nav-container">
+        <a href="../index.html" class="nav-brand">
+            <div class="nav-logo-img">
+                <img src="../images/Logo.jpg" alt="ViriatuPet's Logo">
+            </div>
+            <div class="nav-brand-text">
+                <span class="nav-name">ViriatuPet's</span>
+                <span class="nav-sub">Consultório Veterinário</span>
+            </div>
+        </a>
+
+        <ul class="nav-menu" id="navMenu">
+            <li><a href="../index.html#sobre" class="nav-link">Sobre</a></li>
+            <li class="nav-item-dropdown">
+                <a href="../index.html#servicos" class="nav-link">Serviços <i class="fas fa-chevron-down nav-caret"></i></a>
+                <ul class="nav-dropdown">
+                    <li><a href="./consultas/index.html"><i class="fas fa-stethoscope"></i> Consultas</a></li>
+                    <li><a href="./vacinacao/index.html"><i class="fas fa-syringe"></i> Vacinação</a></li>
+                    <li><a href="./desparasitacao/index.html"><i class="fas fa-shield-virus"></i> Desparasitação</a></li>
+                    <li><a href="./microchip/index.html"><i class="fas fa-microchip"></i> Microchip</a></li>
+                    <li><a href="./analises-clinicas/index.html"><i class="fas fa-flask"></i> Análises Clínicas</a></li>
+                    <li><a href="./visitas-domicilio/index.html"><i class="fas fa-house-medical"></i> Visitas Domicílio</a></li>
+                    <li><a href="./nutricao/index.html"><i class="fas fa-bowl-food"></i> Nutrição</a></li>
+                </ul>
+            </li>
+            <li><a href="../blog.html" class="nav-link">Blog</a></li>
+            <li><a href="../index.html#contactos" class="nav-link">Contactos</a></li>
+            <li><a href="../index.html#marcacao" class="nav-cta-btn">Marcar Consulta</a></li>
+        </ul>
+
+        <button class="hamburger" id="hamburger" aria-label="Abrir menu" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
+    </div>
+</nav>
+
+<!-- ========== BREADCRUMB ========== -->
+<div class="breadcrumb">
+    <nav class="container bc-inner" aria-label="Breadcrumb">
+        <a href="../index.html">Início</a>
+        <span class="bc-sep"><i class="fas fa-chevron-right"></i></span>
+        <span>Serviços</span>
+    </nav>
+</div>
+
+<!-- ========== HERO ========== -->
+<header class="svc-hero">
+
+    <div class="svc-hero-paws" aria-hidden="true">
+        <svg class="paw-pattern" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <pattern id="pawIdx-hero" patternUnits="userSpaceOnUse" width="330" height="330">
+                    <g fill="rgba(255,255,255,0.06)" transform="rotate(-20, 165, 155)">
+                        <ellipse cx="165" cy="155" rx="55" ry="43"/>
+                        <ellipse cx="94"  cy="100" rx="19" ry="23"/>
+                        <ellipse cx="142" cy="82"  rx="19" ry="23"/>
+                        <ellipse cx="188" cy="82"  rx="19" ry="23"/>
+                        <ellipse cx="236" cy="100" rx="19" ry="23"/>
+                    </g>
+                </pattern>
+            </defs>
+            <rect width="100%" height="100%" fill="url(#pawIdx-hero)"/>
+        </svg>
+    </div>
+
+    <div class="svc-hero-inner svc-hero-centered">
+        <div data-aos="fade-up">
+            <div class="svc-hero-badge"><i class="fas fa-paw"></i> ViriatuPet's, Viseu</div>
+            <h1>Serviços Veterinários em Viseu</h1>
+            <p>Cuidados completos para cães, gatos e animais exóticos — da prevenção ao tratamento, sempre com atenção personalizada.</p>
+            <div class="svc-hero-actions">
+                <a href="https://wa.me/351933454251?text=Ol%C3%A1!%20Gostaria%20de%20marcar%20uma%20consulta%20na%20ViriatuPet%27s."
+                   class="btn btn-whatsapp" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-whatsapp"></i> Marcar Consulta
+                </a>
+                <a href="tel:+351933454251" class="btn btn-outline-white">
+                    <i class="fas fa-phone"></i> Falar connosco
+                </a>
+            </div>
+            <div class="svc-hero-chips">
+                <span class="svc-hero-chip"><i class="fas fa-dog"></i> Cães</span>
+                <span class="svc-hero-chip"><i class="fas fa-cat"></i> Gatos</span>
+                <span class="svc-hero-chip"><i class="fas fa-paw"></i> Exóticos</span>
+                <span class="svc-hero-chip"><i class="fas fa-house-medical"></i> Domicílios</span>
+                <span class="svc-hero-chip"><i class="fas fa-calendar-week"></i> Aberto ao Sábado</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="hero-wave" aria-hidden="true">
+        <svg viewBox="0 0 1440 100" preserveAspectRatio="none">
+            <path d="M0,50 C200,100 400,0 600,50 C800,100 1050,0 1250,50 C1350,75 1400,60 1440,50 L1440,100 L0,100 Z" fill="#FFF6E8"/>
+        </svg>
+    </div>
+</header>
+
+<!-- ========== TODOS OS SERVIÇOS ========== -->
+<section class="sec paw-section" style="background:var(--cream)">
+
+    <div class="paw-section-bg" aria-hidden="true">
+        <svg xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <pattern id="pawIdx-services" patternUnits="userSpaceOnUse" width="240" height="180">
+                    <g fill="rgba(43,168,164,0.055)">
+                        <g transform="rotate(-12, 50, 55)">
+                            <ellipse cx="50" cy="55" rx="14" ry="11"/>
+                            <ellipse cx="32" cy="41" rx="5" ry="6"/>
+                            <ellipse cx="44" cy="36" rx="5" ry="6"/>
+                            <ellipse cx="56" cy="36" rx="5" ry="6"/>
+                            <ellipse cx="68" cy="41" rx="5" ry="6"/>
+                        </g>
+                        <g transform="rotate(25, 175, 45)">
+                            <ellipse cx="175" cy="45" rx="14" ry="11"/>
+                            <ellipse cx="157" cy="31" rx="5" ry="6"/>
+                            <ellipse cx="169" cy="26" rx="5" ry="6"/>
+                            <ellipse cx="181" cy="26" rx="5" ry="6"/>
+                            <ellipse cx="193" cy="31" rx="5" ry="6"/>
+                        </g>
+                        <g transform="rotate(-30, 108, 132)">
+                            <ellipse cx="108" cy="132" rx="14" ry="11"/>
+                            <ellipse cx="90"  cy="118" rx="5" ry="6"/>
+                            <ellipse cx="102" cy="113" rx="5" ry="6"/>
+                            <ellipse cx="114" cy="113" rx="5" ry="6"/>
+                            <ellipse cx="126" cy="118" rx="5" ry="6"/>
+                        </g>
+                    </g>
+                </pattern>
+            </defs>
+            <rect width="100%" height="100%" fill="url(#pawIdx-services)"/>
+        </svg>
+    </div>
+
+    <div class="container" data-aos="fade-up">
+        <div class="section-header">
+            <div class="section-label">O que fazemos</div>
+            <h2 class="section-title">Todos os nossos <span style="color:var(--teal)">serviços</span></h2>
+            <p class="section-subtitle">Cada serviço é pensado para o bem-estar do seu animal — com rigor clínico e atenção personalizada.</p>
+        </div>
+
+        <div class="hub-grid">
+
+            <div class="hub-card" data-aos="fade-up" data-aos-delay="50">
+                <div class="hub-icon"><i class="fas fa-stethoscope"></i></div>
+                <h3>Consultas Veterinárias</h3>
+                <p>Acompanhamento completo para o seu animal — diagnóstico preciso, tratamento cuidadoso e uma relação de confiança.</p>
+                <ul class="hub-bullets">
+                    <li>Exame físico completo</li>
+                    <li>Historial clínico sempre atualizado</li>
+                    <li>Cães, gatos e exóticos</li>
+                </ul>
+                <a href="./consultas/" class="hub-link">Saber mais <i class="fas fa-arrow-right"></i></a>
+            </div>
+
+            <div class="hub-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="hub-icon"><i class="fas fa-syringe"></i></div>
+                <h3>Vacinação</h3>
+                <p>Protocolos personalizados de vacinação, incluindo vacinas obrigatórias por lei e reforços anuais.</p>
+                <ul class="hub-bullets">
+                    <li>Vacina antirrábica obrigatória</li>
+                    <li>Atualização do passaporte</li>
+                    <li>Protocolo por espécie e idade</li>
+                </ul>
+                <a href="./vacinacao/" class="hub-link">Saber mais <i class="fas fa-arrow-right"></i></a>
+            </div>
+
+            <div class="hub-card" data-aos="fade-up" data-aos-delay="150">
+                <div class="hub-icon"><i class="fas fa-shield-virus"></i></div>
+                <h3>Desparasitação</h3>
+                <p>Tratamentos internos e externos adaptados ao estilo de vida do animal — protege o animal e a família.</p>
+                <ul class="hub-bullets">
+                    <li>Interna e externa</li>
+                    <li>Protege contra zoonoses</li>
+                    <li>Produtos adequados ao animal</li>
+                </ul>
+                <a href="./desparasitacao/" class="hub-link">Saber mais <i class="fas fa-arrow-right"></i></a>
+            </div>
+
+            <div class="hub-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="hub-icon"><i class="fas fa-microchip"></i></div>
+                <h3>Microchip</h3>
+                <p>Identificação eletrónica obrigatória por lei. Procedimento rápido, indolor e com registo no SIAC incluído.</p>
+                <ul class="hub-bullets">
+                    <li>Obrigatório por lei</li>
+                    <li>Registo SIAC incluído</li>
+                    <li>Passaporte europeu</li>
+                </ul>
+                <a href="./microchip/" class="hub-link">Saber mais <i class="fas fa-arrow-right"></i></a>
+            </div>
+
+            <div class="hub-card" data-aos="fade-up" data-aos-delay="250">
+                <div class="hub-icon"><i class="fas fa-flask"></i></div>
+                <h3>Análises Clínicas</h3>
+                <p>Hemograma, bioquímica, urianálise e testes de doenças infeciosas — diagnóstico preciso com resultados rápidos.</p>
+                <ul class="hub-bullets">
+                    <li>Resultados rápidos</li>
+                    <li>Interpretação personalizada</li>
+                    <li>Pré-cirúrgico e rotina</li>
+                </ul>
+                <a href="./analises-clinicas/" class="hub-link">Saber mais <i class="fas fa-arrow-right"></i></a>
+            </div>
+
+            <div class="hub-card" data-aos="fade-up" data-aos-delay="300">
+                <div class="hub-icon"><i class="fas fa-house-medical"></i></div>
+                <h3>Visitas ao Domicílio</h3>
+                <p>O veterinário vai a sua casa. Ideal para animais sénior, ansiosos ou quando tem vários animais em casa.</p>
+                <ul class="hub-bullets">
+                    <li>Viseu e arredores</li>
+                    <li>Menos stresse para o animal</li>
+                    <li>Consulta, vacinas e microchip em casa</li>
+                </ul>
+                <a href="./visitas-domicilio/" class="hub-link">Saber mais <i class="fas fa-arrow-right"></i></a>
+            </div>
+
+            <div class="hub-card" data-aos="fade-up" data-aos-delay="350">
+                <div class="hub-icon"><i class="fas fa-apple-alt"></i></div>
+                <h3>Nutrição</h3>
+                <p>Aconselhamento nutricional personalizado para cada fase da vida — da dieta de rotina à alimentação terapêutica.</p>
+                <ul class="hub-bullets">
+                    <li>Controlo de peso</li>
+                    <li>Dieta terapêutica</li>
+                    <li>Alimentação caseira supervisionada</li>
+                </ul>
+                <a href="./nutricao/" class="hub-link">Saber mais <i class="fas fa-arrow-right"></i></a>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- Onda: cream → branco -->
+<div class="svc-wave" style="background:var(--cream)" aria-hidden="true">
+    <svg viewBox="0 0 1440 80" preserveAspectRatio="none">
+        <path d="M0,40 C200,0 400,80 600,40 C800,0 1050,80 1250,40 C1350,20 1400,30 1440,40 L1440,80 L0,80 Z" fill="#ffffff"/>
+    </svg>
+</div>
+
+<!-- ========== TRUST BAR ========== -->
+<section style="background:#fff" aria-label="Destaques">
+    <div class="container">
+        <div class="trust-stats" data-aos="fade-up">
+            <div class="trust-stat">
+                <div class="trust-stat-icon"><i class="fas fa-paw"></i></div>
+                <div class="trust-stat-title">Cães, Gatos &amp; Exóticos</div>
+                <div class="trust-stat-sub">Todas as espécies</div>
+            </div>
+            <div class="trust-stat">
+                <div class="trust-stat-icon"><i class="fas fa-house-medical"></i></div>
+                <div class="trust-stat-title">Visitas ao Domicílio</div>
+                <div class="trust-stat-sub">Em Viseu e arredores</div>
+            </div>
+            <div class="trust-stat">
+                <div class="trust-stat-icon"><i class="fas fa-calendar-check"></i></div>
+                <div class="trust-stat-title">Aberto ao Sábado</div>
+                <div class="trust-stat-sub">9h30 – 17h00</div>
+            </div>
+            <div class="trust-stat">
+                <div class="trust-stat-icon"><i class="fas fa-phone"></i></div>
+                <div class="trust-stat-title">933 454 251</div>
+                <div class="trust-stat-sub">Resposta rápida via WhatsApp</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Onda: branco → escuro -->
+<div class="svc-wave" style="background:#fff" aria-hidden="true">
+    <svg viewBox="0 0 1440 80" preserveAspectRatio="none">
+        <path d="M0,40 C200,0 400,80 600,40 C800,0 1050,80 1250,40 C1350,20 1400,30 1440,40 L1440,80 L0,80 Z" fill="#1A3535"/>
+    </svg>
+</div>
+
+<!-- ========== CTA BAND ========== -->
+<section class="cta-band">
+    <div class="container cta-band-inner">
+        <div class="cta-band-text" data-aos="fade-up">
+            <h2>Não sabe por onde começar?</h2>
+            <p>Contacte-nos — explicamos o que o seu animal precisa e marcamos o serviço certo.</p>
+        </div>
+        <div class="cta-band-btns" data-aos="fade-up" data-aos-delay="100">
+            <a href="https://wa.me/351933454251?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20os%20servi%C3%A7os%20da%20ViriatuPet%27s."
+               class="btn btn-whatsapp" target="_blank" rel="noopener noreferrer">
+                <i class="fab fa-whatsapp"></i> Falar via WhatsApp
+            </a>
+            <a href="tel:+351933454251" class="btn btn-phone-lg">
+                <i class="fas fa-phone"></i> 933 454 251
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Onda: escuro → cream -->
+<div class="svc-wave" style="background:#1A3535" aria-hidden="true">
+    <svg viewBox="0 0 1440 80" preserveAspectRatio="none">
+        <path d="M0,40 C200,0 400,80 600,40 C800,0 1050,80 1250,40 C1350,20 1400,30 1440,40 L1440,80 L0,80 Z" fill="#FFF6E8"/>
+    </svg>
+</div>
+
+<!-- ========== BLOG PREVIEW ========== -->
+<section class="sec paw-section blog-preview-cream">
+
+    <div class="paw-section-bg" aria-hidden="true">
+        <svg xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <pattern id="pawIdx-blog" patternUnits="userSpaceOnUse" width="240" height="180">
+                    <g fill="rgba(43,168,164,0.055)">
+                        <g transform="rotate(-20, 48, 48)">
+                            <ellipse cx="48" cy="48" rx="14" ry="11"/>
+                            <ellipse cx="30" cy="34" rx="5" ry="6"/>
+                            <ellipse cx="42" cy="29" rx="5" ry="6"/>
+                            <ellipse cx="54" cy="29" rx="5" ry="6"/>
+                            <ellipse cx="66" cy="34" rx="5" ry="6"/>
+                        </g>
+                        <g transform="rotate(14, 178, 52)">
+                            <ellipse cx="178" cy="52" rx="14" ry="11"/>
+                            <ellipse cx="160" cy="38" rx="5" ry="6"/>
+                            <ellipse cx="172" cy="33" rx="5" ry="6"/>
+                            <ellipse cx="184" cy="33" rx="5" ry="6"/>
+                            <ellipse cx="196" cy="38" rx="5" ry="6"/>
+                        </g>
+                        <g transform="rotate(-22, 112, 132)">
+                            <ellipse cx="112" cy="132" rx="14" ry="11"/>
+                            <ellipse cx="94"  cy="118" rx="5" ry="6"/>
+                            <ellipse cx="106" cy="113" rx="5" ry="6"/>
+                            <ellipse cx="118" cy="113" rx="5" ry="6"/>
+                            <ellipse cx="130" cy="118" rx="5" ry="6"/>
+                        </g>
+                    </g>
+                </pattern>
+            </defs>
+            <rect width="100%" height="100%" fill="url(#pawIdx-blog)"/>
+        </svg>
+    </div>
+
+    <div class="container">
+        <div class="section-header" data-aos="fade-up">
+            <div class="section-label">Do nosso blog</div>
+            <h2 class="section-title">Artigos sobre saúde animal</h2>
+            <p class="section-subtitle">Escritos pela equipa da ViriatuPet's para o ajudar a cuidar melhor do seu companheiro.</p>
+        </div>
+
+        <div class="blog-preview-grid">
+            <a href="../blog/vacinacao-caes-viseu.html" class="blog-card" data-aos="fade-up" data-aos-delay="50">
+                <div class="blog-card-thumb">
+                    <img src="../images/Vacinacao Gatos 16.9.jpeg"
+                         alt="Guia de vacinação de cães em Viseu" loading="lazy">
+                    <span class="blog-cat-badge">Prevenção</span>
+                </div>
+                <div class="blog-card-body">
+                    <div class="blog-card-meta">
+                        <span><i class="fas fa-calendar"></i> Abril 2026</span>
+                        <span><i class="fas fa-clock"></i> 6 min</span>
+                    </div>
+                    <h3>Guia completo de vacinação de cães em Viseu</h3>
+                    <p>Vacinas obrigatórias em Portugal, calendário de vacinação e tudo o que precisa de saber para proteger o seu cão.</p>
+                    <span class="blog-read-more">Ler artigo <i class="fas fa-arrow-right"></i></span>
+                </div>
+            </a>
+
+            <a href="../blog/desparasitacao-caes-gatos.html" class="blog-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="blog-card-thumb">
+                    <img src="../images/Desparasitação em Cães 16.9.jpeg"
+                         alt="Desparasitação em cães e gatos" loading="lazy">
+                    <span class="blog-cat-badge" style="background:var(--teal)">Prevenção</span>
+                </div>
+                <div class="blog-card-body">
+                    <div class="blog-card-meta">
+                        <span><i class="fas fa-calendar"></i> Abril 2026</span>
+                        <span><i class="fas fa-clock"></i> 5 min</span>
+                    </div>
+                    <h3>Desparasitação em Cães e Gatos: Quando, Como e Porquê</h3>
+                    <p>Parasitas internos e externos, frequência de tratamento e como proteger o seu animal e a sua família.</p>
+                    <span class="blog-read-more">Ler artigo <i class="fas fa-arrow-right"></i></span>
+                </div>
+            </a>
+
+            <a href="../blog/quando-ir-veterinario.html" class="blog-card" data-aos="fade-up" data-aos-delay="150">
+                <div class="blog-card-thumb">
+                    <img src="../images/sinais emergencia animal 16.9.jpeg"
+                         alt="Quando ir ao veterinário" loading="lazy">
+                    <span class="blog-cat-badge" style="background:#E84B3A">Urgências</span>
+                </div>
+                <div class="blog-card-body">
+                    <div class="blog-card-meta">
+                        <span><i class="fas fa-calendar"></i> Abril 2026</span>
+                        <span><i class="fas fa-clock"></i> 5 min</span>
+                    </div>
+                    <h3>Quando ir ao veterinário: sinais de alerta no seu animal</h3>
+                    <p>Um guia prático para distinguir sintomas de emergência dos que podem aguardar consulta normal.</p>
+                    <span class="blog-read-more">Ler artigo <i class="fas fa-arrow-right"></i></span>
+                </div>
+            </a>
+        </div>
+
+        <div style="text-align:center;margin-top:2.5rem" data-aos="fade-up">
+            <a href="../blog.html" class="btn btn-outline-teal">
+                Ver todos os artigos <i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- ========== FOOTER ========== -->
+<footer class="footer">
+    <div class="footer-top">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand-col">
+                    <div class="footer-logo">
+                        <img src="../images/Logo.jpg" alt="ViriatuPet's Logo" class="footer-logo-img">
+                    </div>
+                    <p class="footer-desc">
+                        Cuidamos dos seus animais como se fossem os nossos.
+                        Consultas veterinárias com carinho e profissionalismo em Viseu.
+                    </p>
+                    <div class="footer-socials">
+                        <a href="https://wa.me/351933454251" aria-label="WhatsApp"
+                           target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://www.facebook.com/profile.php?id=61583484770981" aria-label="Facebook"
+                           target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook"></i></a>
+                        <a href="mailto:viriatuspet@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-links-col">
+                    <h4>Navegação</h4>
+                    <ul>
+                        <li><a href="../index.html#sobre">Sobre nós</a></li>
+                        <li><a href="../index.html#servicos">Serviços</a></li>
+                        <li><a href="../index.html#galeria">Galeria</a></li>
+                        <li><a href="../index.html#testemunhos">Testemunhos</a></li>
+                        <li><a href="../blog.html">Blog</a></li>
+                        <li><a href="../index.html#faq">FAQ</a></li>
+                        <li><a href="../index.html#contactos">Contactos</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-services-col">
+                    <h4>Serviços</h4>
+                    <ul>
+                        <li><a href="./consultas/">Consultas</a></li>
+                        <li><a href="./vacinacao/">Vacinação</a></li>
+                        <li><a href="./desparasitacao/">Desparasitação</a></li>
+                        <li><a href="./microchip/">Microchip</a></li>
+                        <li><a href="./analises-clinicas/">Análises Clínicas</a></li>
+                        <li><a href="./visitas-domicilio/">Domicílios</a></li>
+                        <li><a href="./nutricao/">Nutrição</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-contact-col">
+                    <h4>Contacto</h4>
+                    <div class="footer-contact-item">
+                        <i class="fas fa-location-dot"></i>
+                        <span>Av. da Europa, Rua A. Barbosa Campos, lote 121, Loja B, 3510-900 Viseu</span>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fas fa-phone"></i>
+                        <a href="tel:+351933454251">933 454 251</a>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:viriatuspet@gmail.com">viriatuspet@gmail.com</a>
+                    </div>
+                    <a href="../index.html#marcacao" class="btn btn-primary btn-sm footer-cta-btn">Marcar Consulta</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <div class="container">
+            <p>© 2026 ViriatuPet's – Consultório Veterinário, Viseu. Todos os direitos reservados.</p>
+            <div class="footer-bottom-links">
+                <a href="../privacy.html">Política de Privacidade</a>
+                <span>·</span>
+                <a href="#">Termos e Condições</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- ========== WHATSAPP FLUTUANTE ========== -->
+<a href="https://wa.me/351933454251?text=Ol%C3%A1!%20Gostaria%20de%20marcar%20uma%20consulta%20na%20ViriatuPet%27s."
+   class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Marcar consulta via WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+    <span class="wa-tooltip">Marcar Consulta</span>
+</a>
+
+<!-- ========== VOLTAR AO TOPO ========== -->
+<button class="back-to-top" id="backToTop" aria-label="Voltar ao topo">
+    <i class="fas fa-chevron-up"></i>
+</button>
+
+<script src="../js/script.js"></script>
+</body>
+</html>
